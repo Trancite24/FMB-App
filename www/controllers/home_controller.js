@@ -1,5 +1,5 @@
 function goContact(){
-    window.plugins.nativepagetransitions.slide({
+    window.plugins.nativepagetransitions.flip({
         "href" : "contact.html"
     });
 }

@@ -1,5 +1,5 @@
 function goHome(){
-    window.plugins.nativepagetransitions.slide({
+    window.plugins.nativepagetransitions.flip({
         "href" : "home.html"
     });
 }

@@ -45,10 +45,10 @@
         <i class="ion-android-menu" onclick="goContact();"></i>
       </div>
     </div>
-  </div>
         
   <!-- Main Content -->
-  <div class="animated fadeinup">
+  <div class="animated fadeinup delay-1">
+
     <br><br>
     <div class="details-grid bus">
       <div class="details-shade ">
@@ -61,10 +61,10 @@
     </div>
     <div class="w3agile banner-bottom">
       <ul>
-        <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/enter.png" onclick="EnterAlert();"/></a><h6>Enter</h6></li>
-        <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/search.png" onclick="SearchAlert();"/></a><h6>Search</h6></li>
-        <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/plan.png" onclick="PlanAlert();"/></a><h6>Plan</h6></li>
-        <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/go.png" onclick="GoAlert();"/></a><h6>Go</h6></li>
+        <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/enter.png" class="img-dp" onclick="EnterAlert();"/></a><h6>Enter</h6></li>
+        <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/search.png" class="img-dp" onclick="SearchAlert();"/></a><h6>Search</h6></li>
+        <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/plan.png" class="img-dp" onclick="PlanAlert();"/></a><h6>Plan</h6></li>
+        <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/go.png" class="img-dp" onclick="GoAlert();"/></a><h6>Go</h6></li>
       </ul>
     </div>
     <!-- //banner -->
@@ -92,12 +92,12 @@
               </div>
               <div class="bnr-right">
                 <label class="inputLabel">Time of Journey</label>
-                <input class="date" id="datepicker1" type="text" value="hh-mm" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'hh-mm';}" required=>
+                <input class="date" type="text" value="hh-mm" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'hh-mm';}" required=>
               </div>
               <div class="clearfix"></div>
               <!---start-date-piker---->
               <link rel="stylesheet" href="css/jquery-ui.css" />
-              <script src="js/jquery-ui.js"></script>
+              <script src="../js/external/jquery-ui.js"></script>
               <script>
                 $(function() {
                   $( "#datepicker,#datepicker1" ).datepicker();
@@ -112,6 +112,8 @@
         </div>
       </div>
     </div>
+
+
   </div> <!-- End of Main Contents -->
       
        

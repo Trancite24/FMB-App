@@ -513,6 +513,7 @@ background: #020202 url(../../images/search.png) no-repeat 17px 8px;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+
 }
 .hvr-radial-out:before {
   content: "";
@@ -3040,7 +3041,7 @@ input[type="file"] {
 		width: 50%;
 	}
 	.label {
-		font-size: 53%;
+		font-size: 100%;
 	}
 	.button--wayra {
 		width: 31%;
@@ -3615,7 +3616,9 @@ input[type="file"] {
 .primary-color {
     background-color:#2f4f4f !important;
 }
-
+.secondary-color {
+    background-color: mediumseagreen!important;
+}
 /*------------------------------------------------------------------
 5. Toolbar
 -------------------------------------------------------------------*/
@@ -3645,6 +3648,7 @@ input[type="file"] {
     z-index: 3;
 }
 .open-left {
+    padding: 16px;
     float: left;
     height: 56px;
     line-height: 56px;
@@ -3653,6 +3657,7 @@ input[type="file"] {
     position: relative;
 }
 .open-right {
+    padding: 16px;
     float: right;
     height: 56px;
     line-height: 56px;
@@ -3670,7 +3675,7 @@ input[type="file"] {
     font-weight: 500;
     color: #fff;
     line-height: 56px;
-    margin-left: 30%;
+    margin-left: 27%;
     text-transform: none;
     letter-spacing: normal;
 }
@@ -3774,19 +3779,19 @@ input[type="file"] {
 .activity .row {
     padding-left: 20px;
     border-left: 2px solid #eee;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 .activity .contact {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .activity .dot {
     width: 20px;
     height: 20px;
     background-color: #fff;
     position: absolute;
-    top: 17px;
+    top: 30px;
     left: -42px;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 .activity .date {
     position: absolute;
@@ -3818,21 +3823,21 @@ input[type="file"] {
     width: 100%;
 }
 .steps-controllers {
-
     height: 8%;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 10;
-    border-top: 3px solid #ddd;
+    border-top: 2px solid #ddd;
     background-color: #2f4f4f;
+
 }
 .steps-controllers > div {
     width: 33.3333%;
     float: left;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     border-right: 1px solid #ddd;
 }
 .steps-controllers > div:last-child {
@@ -3851,4 +3856,8 @@ input[type="file"] {
     position: static;
     height: auto;
     padding: 20px 0;
+}
+
+.img-dp{
+    padding-top: 15px;
 }
