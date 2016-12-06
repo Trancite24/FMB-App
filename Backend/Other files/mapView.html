@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #adminMap {
+            height:550px;
+            width:900px;
+
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAudcLsRCpIcU_dRsKeL3fAMAkhyI6kUf8&callback=initMap" async defer></script>
+
+    <script>
+        var map, ren, ser;
+        var data = {};
+
+        function initMap() {
+            map = new google.maps.Map( document.getElementById('adminMap'), {'zoom':12, 'mapTypeId': google.maps.MapTypeId.ROADMAP, 'center': new google.maps.LatLng(26.05678288577881, -80.30236816615798) })
+
+            ren = new google.maps.DirectionsRenderer( {'draggable':false} );
+            ren.setMap(map);
+            ser = new google.maps.DirectionsService();
+            fetchdata();
+
+        }
+
+        function fetchdata()
+        {
+            var jax = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+            jax.open('GET','process2.php');
+            jax.send('command=fetch')
+            jax.onreadystatechange = function(){ if(jax.readyState==4) {
+                alert(jax.responseText);
+                try { setroute( eval('(' + jax.responseText + ')') ); }
+                catch(e){ alert(e); }
+            }}
+        }
+        function setroute(os)
+        {
+            var wp = [];
+            for(var i=0;i<os.waypoints.length;i++)
+                wp[i] = {'location': new google.maps.LatLng(os.waypoints[i][0], os.waypoints[i][1]),'stopover':false }
+
+            ser.route({'origin':new google.maps.LatLng(os.start.lat,os.start.lng),
+                'destination':new google.maps.LatLng(os.end.lat,os.end.lng),
+                'waypoints': wp,
+                'travelMode': google.maps.DirectionsTravelMode.DRIVING},function(res,sts) {
+                if(sts=='OK')ren.setDirections(res);
+            })
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="adminMap"></div>
+
+</body>
+</html>
