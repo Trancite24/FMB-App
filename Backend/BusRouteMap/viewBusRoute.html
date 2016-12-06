@@ -41,7 +41,7 @@
         {
             var jax = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
             jax.open('GET','process2.php');
-            jax.send('command=fetch')
+            jax.send('route_no=fetch');
             jax.onreadystatechange = function(){ if(jax.readyState==4) {
                 alert(jax.responseText);
                 try { setroute( eval('(' + jax.responseText + ')') ); }

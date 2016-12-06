@@ -54,9 +54,9 @@
             var str = JSON.stringify(data)
 
             var jax = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-            jax.open('POST','process.php');
+            jax.open('POST','busRouteMapSaver.php');
             jax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-            jax.send('command=save&mapdata='+str);
+            jax.send('mapdata='+str);
             alert(str);
             jax.onreadystatechange = function(){ if(jax.readyState==4) {
                 if(jax.responseText.indexOf('bien')+1)alert('Updated');

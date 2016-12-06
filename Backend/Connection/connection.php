@@ -8,10 +8,7 @@
  * This class is used to connect to the Database
  */
 
-$servername = "";
-$username = "";
-$password = "";
-$dbname = "";
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
