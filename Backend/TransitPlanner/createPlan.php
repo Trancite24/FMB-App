@@ -102,6 +102,7 @@ $end_point = $_GET['end_point'];
 $currentTime = $_GET['time'];
 
 $route = $DijkstrasInstance->calculateShortestPath( $start_point , $end_point );
+echo $_GET['callback']."(".(json_encode($route)).")";
 //-------------------------------------------
 
 $timeForJourney = explode(":" , $route)[0];
