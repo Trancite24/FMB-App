@@ -28,7 +28,7 @@
         var data = {};
 
         function initMap() {
-            map = new google.maps.Map( document.getElementById('adminMap'), {'zoom':12, 'mapTypeId': google.maps.MapTypeId.ROADMAP, 'center': new google.maps.LatLng(26.05678288577881, -80.30236816615798) })
+            map = new google.maps.Map( document.getElementById('adminMap'), {'zoom':12, 'mapTypeId': google.maps.MapTypeId.ROADMAP, 'center': new google.maps.LatLng(6.9218374, 79.8211859) })
 
             ren = new google.maps.DirectionsRenderer( {'draggable':false} );
             ren.setMap(map);
@@ -39,7 +39,7 @@
 
         function fetchdata()
         {
-            var route_no = 2;
+            var route_no = 7;
 
             jQuery.ajax({
                 type: "GET",
@@ -47,8 +47,6 @@
                 url: "http://localhost/applications/FindMyBus/Test-project/Backend/BusRouteMap/busRouteMapLoader.php?" +
                 "route_no="+route_no,
                 success: function (obj, textstatus) {
-
-                    alert(obj);
                     try { setroute( eval('(' + obj + ')') ); }
                     catch(e){ alert(e); }
                 }

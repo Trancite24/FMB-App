@@ -11,7 +11,7 @@
 include '../Connection/connection.php';
 
 //$route_no = $_REQUEST['route_no'];
-$route_no = 2;
+$route_no = $_GET['route_no'];
 //create query to update the database
 $query = "SELECT route_map FROM bus_route WHERE route_no='$route_no'";
 //connect the query and retrieve the result

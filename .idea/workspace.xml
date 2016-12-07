@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84acd480-e61c-4979-a8d8-15a008e896cf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/FMB.iml" afterPath="$PROJECT_DIR$/.idea/FMB.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend/BusRouteMap/addNewBusRouteAdmin.html" afterPath="$PROJECT_DIR$/Backend/BusRouteMap/addNewBusRouteAdmin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend/BusRouteMap/busRouteMapLoader.php" afterPath="$PROJECT_DIR$/Backend/BusRouteMap/busRouteMapLoader.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend/BusRouteMap/viewBusRoute.html" afterPath="$PROJECT_DIR$/Backend/BusRouteMap/viewBusRoute.html" />
     </list>
@@ -45,28 +42,8 @@
       <file leaf-file-name="viewBusRoute.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend/BusRouteMap/viewBusRoute.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="902">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/view/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="161" column="76" lean-forward="false" selection-start-line="161" selection-start-column="76" selection-end-line="161" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home_controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/controllers/home_controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="23" selection-end-column="7" />
+            <state relative-caret-position="198">
+              <caret line="30" column="186" lean-forward="false" selection-start-line="30" selection-start-column="186" selection-end-line="30" selection-end-column="186" />
               <folding />
             </state>
           </provider>
@@ -75,8 +52,8 @@
       <file leaf-file-name="createPlan.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/TransitPlanner/createPlan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="60" />
+            <state relative-caret-position="362">
+              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="36" />
               <folding>
                 <element signature="n#getTime#0;n#!!top" expanded="false" />
                 <element signature="n#get_lat_long#0;n#!!top" expanded="false" />
@@ -91,10 +68,9 @@
       <file leaf-file-name="addNewBusRouteAdmin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/BusRouteMap/addNewBusRouteAdmin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="123" column="127" lean-forward="false" selection-start-line="123" selection-start-column="127" selection-end-line="123" selection-end-column="127" />
+            <state relative-caret-position="312">
+              <caret line="35" column="165" lean-forward="false" selection-start-line="35" selection-start-column="165" selection-end-line="35" selection-end-column="186" />
               <folding>
-                <element signature="e#1316#4152#0" expanded="false" />
                 <element signature="e#4345#5434#0" expanded="false" />
               </folding>
             </state>
@@ -104,10 +80,10 @@
       <file leaf-file-name="busRouteMapLoader.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/BusRouteMap/busRouteMapLoader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="132">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding>
-                <marker date="1481131293939" expanded="true" signature="283:341" ph="SELECT route... bus_route" />
+                <marker date="1481132385260" expanded="true" signature="299:357" ph="SELECT route... bus_route" />
               </folding>
             </state>
           </provider>
@@ -118,6 +94,21 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="findmybus.bus_route" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/f634b340/39d0f866-769e-4b4b-aa41-1ce28745387c/findmybus.bus_route">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -459,12 +450,12 @@
       <updated>1480991713017</updated>
       <workItem from="1480991714408" duration="26811000" />
       <workItem from="1481120070093" duration="14000" />
-      <workItem from="1481120101819" duration="10779000" />
+      <workItem from="1481120101819" duration="11148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37604000" />
+    <option name="totallyTimeSpent" value="37973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -778,6 +769,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/TransitPlanner/createPlan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="36" />
+          <folding>
+            <element signature="n#getTime#0;n#!!top" expanded="false" />
+            <element signature="n#get_lat_long#0;n#!!top" expanded="false" />
+            <marker date="1481120363170" expanded="true" signature="565:613" ph="SELECT route... " />
+            <marker date="1481120363170" expanded="true" signature="4584:4638" ph="SELECT timet... bus_route" />
+            <marker date="1481120363170" expanded="true" signature="4867:4925" ph="SELECT start... ${$timetable_name}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/39d0f866-769e-4b4b-aa41-1ce28745387c/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="dbDummy://dbtable:/f634b340/39d0f866-769e-4b4b-aa41-1ce28745387c/findmybus.bus_route">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -791,25 +804,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/39d0f866-769e-4b4b-aa41-1ce28745387c/console_1.sql">
+    <entry file="file://$PROJECT_DIR$/www/controllers/home_controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+        <state relative-caret-position="154">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="23" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/TransitPlanner/createPlan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="60" />
-          <folding>
-            <element signature="n#getTime#0;n#!!top" expanded="false" />
-            <element signature="n#get_lat_long#0;n#!!top" expanded="false" />
-            <marker date="1481120363170" expanded="true" signature="565:613" ph="SELECT route... " />
-            <marker date="1481120363170" expanded="true" signature="4584:4638" ph="SELECT timet... bus_route" />
-            <marker date="1481120363170" expanded="true" signature="4867:4925" ph="SELECT start... ${$timetable_name}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -821,20 +820,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/home_controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/BusRouteMap/addNewBusRouteAdmin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="123" column="127" lean-forward="false" selection-start-line="123" selection-start-column="127" selection-end-line="123" selection-end-column="127" />
+        <state relative-caret-position="312">
+          <caret line="35" column="165" lean-forward="false" selection-start-line="35" selection-start-column="165" selection-end-line="35" selection-end-column="186" />
           <folding>
-            <element signature="e#1316#4152#0" expanded="false" />
             <element signature="e#4345#5434#0" expanded="false" />
           </folding>
         </state>
@@ -842,18 +832,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/BusRouteMap/busRouteMapLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="132">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
           <folding>
-            <marker date="1481131293939" expanded="true" signature="283:341" ph="SELECT route... bus_route" />
+            <marker date="1481132385260" expanded="true" signature="299:357" ph="SELECT route... bus_route" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/BusRouteMap/viewBusRoute.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="30" column="186" lean-forward="false" selection-start-line="30" selection-start-column="186" selection-end-line="30" selection-end-column="186" />
           <folding />
         </state>
       </provider>
