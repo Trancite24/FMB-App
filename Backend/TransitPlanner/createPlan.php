@@ -102,7 +102,7 @@ $end_point = $_GET['end_point'];
 $currentTime = $_GET['time'];
 
 $route = $DijkstrasInstance->calculateShortestPath( $start_point , $end_point );
-echo $_GET['callback']."(".(json_encode($route)).")";
+//echo $_GET['callback']."(".(json_encode($route)).")";
 //-------------------------------------------
 
 $timeForJourney = explode(":" , $route)[0];
@@ -166,6 +166,8 @@ foreach ($routing as &$routeValue){
     $check = true;
 
 }
+
+echo $_GET['callback']."(".(json_encode($final_result)).")";
 
 function getTime($lat1, $lat2, $long1, $long2) {
     $url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" . $lat1 . "," . $long1 . "&destinations=" . $lat2 . "," . $long2 . "&mode=driving&language=en-US&key=AIzaSyDq1_JABbF4d85yAUh1psNLxN0xNHyU3rA";
