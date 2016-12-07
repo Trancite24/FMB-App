@@ -11,8 +11,10 @@
 
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli('166.62.27.168', 'dimuthu', '0773432552ijse4E', 'findmybus');
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+?>

@@ -97,12 +97,12 @@ if ($result->num_rows > 0) {
 $DijkstrasInstance = new DijkstrasAlgorithm($graph);
 
 //get these two points from the request coming in
-$start_point = '107 Bus Station, Lower Chatham Street, Colombo, Western Province';
-$end_point = 'Wellawate Mosque Bus Stop, Galle Road, Colombo, Western Province';
-$currentTime = "2:30";
+$start_point = $_GET['start_point'];
+$end_point = $_GET['end_point'];
+$currentTime = $_GET['time'];
 
 $route = $DijkstrasInstance->calculateShortestPath( $start_point , $end_point );
-echo $route;
+echo $_GET['callback']."(".(json_encode($route)).")";
 //-------------------------------------------
 
 $timeForJourney = explode(":" , $route)[0];
@@ -166,7 +166,6 @@ foreach ($routing as &$routeValue){
     $check = true;
 
 }
-echo "keet";
 
 function getTime($lat1, $lat2, $long1, $long2) {
     $url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" . $lat1 . "," . $long1 . "&destinations=" . $lat2 . "," . $long2 . "&mode=driving&language=en-US&key=AIzaSyDq1_JABbF4d85yAUh1psNLxN0xNHyU3rA";

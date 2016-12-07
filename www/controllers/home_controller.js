@@ -5,9 +5,28 @@ function goContact(){
 }
 
 function goResults(){
-    window.plugins.nativepagetransitions.slide({
-        "href" : "results.html"
+    var from  = $('#from').val();
+    var to = $('#to').val();
+    var date = $('#datepicker').val();
+    var time = $('#time').val();
+
+    console.log(from+" "+to+" "+date+" "+time);
+
+    jQuery.ajax({
+        type: "GET",
+        dataType: 'jsonp',
+        url: "http://localhost:8888/Backend/TransitPlanner/createPlan.php?start_point="+from+"&end_point="+to+"&time="+time,
+        success: function (obj, textstatus) {
+
+
+
+        }
     });
+
+
+    // window.plugins.nativepagetransitions.slide({
+    //     "href" : "results.html"
+    // });
 }
 
 

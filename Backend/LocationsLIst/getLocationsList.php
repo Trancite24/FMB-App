@@ -43,5 +43,5 @@ if ($result->num_rows > 0) {
         }
     }
 }
-echo "";
+echo $_GET['callback']."(".(json_encode($locationList)).")";
 //return the location list array
