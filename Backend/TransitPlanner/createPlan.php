@@ -102,7 +102,6 @@ $end_point = $_GET['end_point'];
 $currentTime = $_GET['time'];
 
 $route = $DijkstrasInstance->calculateShortestPath( $start_point , $end_point );
-echo $_GET['callback']."(".(json_encode($route)).")";
 //-------------------------------------------
 
 $timeForJourney = explode(":" , $route)[0];
@@ -111,8 +110,8 @@ $routing= explode(":" , $route)[1];
 $routing = explode("->" , $routing);
 
 $final_result = array();
-array_push($final_result , "timeForJourney:".$timeForJourney);
-array_push($final_result , "sequenceForJourney:".explode(":" , $route)[1]);
+array_push($final_result , $timeForJourney); //time from start to destination
+array_push($final_result , explode(":" , $route)[1]); //sequence of address pass from start to end
 $temp = "";
 $check = false;
 $time = 0;
@@ -161,11 +160,26 @@ foreach ($routing as &$routeValue){
 
     $time .= explode(" ", getTime($start_array[0] ,  $end_array[0] ,$start_array[1] , $end_array[1]))[0];
 
-    array_push($final_result, $route_no.":".$time);
+    //get route name
+    $query = "SELECT route_name FROM bus_route WHERE route_no='$route_no'";
+    $result = $conn->query($query);
+
+    $route_name = "";
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while ($row = $result->fetch_assoc()) {
+            $route_name = $row["route_name"];
+        }
+    }
+
+
+    array_push($final_result, $route_name.':'.$route_no.":".$time);
 
     $check = true;
 
 }
+
+echo $_GET['callback']."(".(json_encode($final_result)).")";
 
 function getTime($lat1, $lat2, $long1, $long2) {
     $url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" . $lat1 . "," . $long1 . "&destinations=" . $lat2 . "," . $long2 . "&mode=driving&language=en-US&key=AIzaSyDq1_JABbF4d85yAUh1psNLxN0xNHyU3rA";

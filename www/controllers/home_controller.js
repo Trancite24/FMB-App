@@ -18,8 +18,15 @@ function goResults(){
         url: "http://localhost:8888/Backend/TransitPlanner/createPlan.php?start_point="+from+"&end_point="+to+"&time="+time,
         success: function (obj, textstatus) {
 
+            console.log(obj);
 
-
+            localStorage.setItem("results",JSON.stringify(obj));
+            localStorage.setItem("from",from);
+            localStorage.setItem("to",to);
+            // window.plugins.nativepagetransitions.flip({
+            //     "href" : "results.html"
+            // });
+            window.location = "results.html";
         }
     });
 
