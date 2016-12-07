@@ -420,6 +420,16 @@ p {
     -ms-background-size: cover;
     -o-background-size: cover;
 }
+
+.details-grid.bus3{
+    height: 10%;
+    background: url(../../images/banner-bus3.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+}
 .details-shade {
     padding: 68px 0 0;
     background: rgba(22, 21, 23, 0.6);
