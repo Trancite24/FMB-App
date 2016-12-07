@@ -142,10 +142,12 @@
             var jax = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
             jax.open('POST','busRouteMapSaver.php');
             jax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-            jax.send('mapdata='+str);
+            jax.send('route_map='+str+ '&start_lat='+startLat+'&start_long='+startLong+'&start='+startLocation+
+            '&destination='+endLocation+'&route_no='+route_no+'&dest_lat='+endLat+'&dest_long='+endLong);
             alert(str);
             jax.onreadystatechange = function(){ if(jax.readyState==4) {
-                if(jax.responseText.indexOf('bien')+1)alert('Updated');
+
+                if(jax.responseText.indexOf('updated')+1)alert('Updated');
                 else alert(jax.responseText)
             }}
         }
