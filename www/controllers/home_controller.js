@@ -19,14 +19,18 @@ function goResults(){
         success: function (obj, textstatus) {
 
             console.log(obj);
+            if(obj.length<4){
+                localStorage.setItem("results",JSON.stringify(obj));
+                localStorage.setItem("from",from);
+                localStorage.setItem("to",to);
+                // window.plugins.nativepagetransitions.flip({
+                //     "href" : "results.html"
+                // });
+                window.location = "results.html";
+            }else{
+                alert('No direct route found.');
+            }
 
-            localStorage.setItem("results",JSON.stringify(obj));
-            localStorage.setItem("from",from);
-            localStorage.setItem("to",to);
-            // window.plugins.nativepagetransitions.flip({
-            //     "href" : "results.html"
-            // });
-            window.location = "results.html";
         }
     });
 
