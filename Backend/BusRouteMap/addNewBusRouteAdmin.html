@@ -28,18 +28,104 @@
     <script>
         var map, ren, ser;
         var data = {};
+        var markerStart = false; ////Has the user plotted their location marker?
+        var markerEnd = false; ////Has the user plotted their location marker?
+        var startLat, startLong, endLat, endLong;
 
         function initMap() {
-            map = new google.maps.Map( document.getElementById('adminMap'), {'zoom':12, 'mapTypeId': google.maps.MapTypeId.ROADMAP, 'center': new google.maps.LatLng(26.05678288577881, -80.30236816615798) })
+            map = new google.maps.Map( document.getElementById('adminMap'), {'zoom':10, 'mapTypeId': google.maps.MapTypeId.ROADMAP, 'center': new google.maps.LatLng(6.9218374, 79.8211859) })
 
             ren = new google.maps.DirectionsRenderer( {'draggable':true} );
             ren.setMap(map);
             ser = new google.maps.DirectionsService();
 
-            ser.route({ 'origin': new google.maps.LatLng(26.104887637199948, -80.39231872768141), 'destination':  new google.maps.LatLng(25.941991877144947, -80.16160583705641), 'travelMode': google.maps.DirectionsTravelMode.DRIVING},function(res,sts) {
+//            ser.route({ 'origin': new google.maps.LatLng(26.104887637199948, -80.39231872768141), 'destination':  new google.maps.LatLng(25.941991877144947, -80.16160583705641), 'travelMode': google.maps.DirectionsTravelMode.DRIVING},function(res,sts) {
+//                if(sts=='OK')ren.setDirections(res);
+//            })
+
+            //Listen for any clicks on the map.
+            google.maps.event.addListener(map, 'click', function(event) {
+                //Get the location that the user clicked.
+                var clickedLocation = event.latLng;
+
+                if (document.getElementById('startRadioButton').checked){
+
+                    //If the marker hasn't been added.
+                    if(markerStart === false){
+                        //Create the marker.
+                        markerStart = new google.maps.Marker({
+                            position: clickedLocation,
+                            map: map,
+                            draggable: true //make it draggable
+                        });
+                        //Listen for drag events!
+                        google.maps.event.addListener(markerStart, 'dragend', function(event){
+                            markerLocation();
+                        });
+                    } else{
+                        //Marker has already been added, so just change its location.
+                        markerStart.setPosition(clickedLocation);
+                    }
+                }
+                else if (document.getElementById('endRadioButton').checked){
+
+                    //If the marker hasn't been added.
+                    if(markerEnd === false){
+                        //Create the marker.
+                        markerEnd = new google.maps.Marker({
+                            position: clickedLocation,
+                            map: map,
+                            draggable: true //make it draggable
+                        });
+                        //Listen for drag events!
+                        google.maps.event.addListener(markerEnd, 'dragend', function(event){
+                            markerLocation();
+                        });
+                    } else{
+                        //Marker has already been added, so just change its location.
+                        markerEnd.setPosition(clickedLocation);
+                    }
+                }
+
+
+                //Get the marker's location.
+                markerLocation();
+            });
+        }
+
+        //This function will get the marker's current location and then add the lat/long
+        //values to our textfields so that we can save the location.
+        function markerLocation(){
+            //Get location.
+            var currentLocation;
+
+            if (document.getElementById('startRadioButton').checked){
+                //Add lat and lng values to a field that we can save.
+                currentLocation = markerStart.getPosition();
+
+                startLat = currentLocation.lat();
+                startLong = currentLocation.lng();
+//                document.getElementById('startLat').value = currentLocation.lat(); //latitude
+//                document.getElementById('startLong').value = currentLocation.lng(); //longitude
+            }
+            else if (document.getElementById('endRadioButton').checked){
+                //Add lat and lng values to a field that we can save.
+                currentLocation = markerEnd.getPosition();
+
+                endLat = currentLocation.lat();
+                endLong = currentLocation.lng();
+//                document.getElementById('endLat').value = currentLocation.lat(); //latitude
+//                document.getElementById('endLong').value = currentLocation.lng(); //longitude
+            }
+
+        }
+
+        function createRoute(){
+            ser.route({ 'origin': new google.maps.LatLng(startLat, startLong), 'destination':  new google.maps.LatLng(endLat, endLong), 'travelMode': google.maps.DirectionsTravelMode.DRIVING},function(res,sts) {
                 if(sts=='OK')ren.setDirections(res);
             })
         }
+
 
         function save_waypoints()
         {
@@ -72,10 +158,52 @@
 <h3 style="text-align: center">Find My Bus Admin Panel</h3>
 <h5 style="text-align: center">Add New Bus Route</h5>
 <div id="adminMap"></div>
+<br>
+<div>
+    <label for="routeNumber">Enter Route Number</label><input type="text" id="routeNumber"><br>
+</div>
+<hr>
+<div>
+    <input type="radio" name="startEndSelection" id="startRadioButton" value="start location" checked>Set Start Location <br>
+
+</div>
+
+<div>
+    <h4>Choose Start Location</h4>
+    <label for="startLocation">Enter Start Location</label><input type="text" id="startLocation"><br>
+    <!--<form method="post">-->
+        <!--<input type="text" id="startLat" readonly="yes"><br>-->
+        <!--<input type="text" id="startLong" readonly="yes">-->
+    <!--</form>-->
+</div>
+<br>
+<hr>
+<div >
+    <input type="radio" name="startEndSelection" id="endRadioButton" value="end location">Set End Location <br>
+
+</div>
+<div >
+    <h4>Choose End Location</h4>
+    <label for="endLocation">Enter Start Location</label><input type="text" id="endLocation"><br>
+
+    <!--<form method="post">-->
+        <!--<input type="text" id="endLat" readonly="yes"><br>-->
+        <!--<input type="text" id="endLong" readonly="yes">-->
+    <!--</form>-->
+</div>
+
+<hr>
+
+<div style="width:900px; text-align:center; margin:0px auto 0px auto; margin-top:10px;">
+    <input type="button" value="Create Route" onClick="createRoute()">
+</div>
+
+<hr>
+
 <div style="width:900px; text-align:center; margin:0px auto 0px auto; margin-top:10px;">
     <input type="button" value="Save Waypoints" onClick="save_waypoints()">
 </div>
-
+<br><br>
 
 </body>
 </html>
