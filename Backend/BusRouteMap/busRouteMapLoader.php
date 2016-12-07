@@ -10,9 +10,16 @@
 
 include '../Connection/connection.php';
 
-$route_no = $_REQUEST['route_no'];
-
+//$route_no = $_REQUEST['route_no'];
+$route_no = 2;
 //create query to update the database
-$query = "SELECT route_map FROM bus_route WHERE route_no = '$route_no'";
+$query = "SELECT route_map FROM bus_route WHERE route_no='$route_no'";
 //connect the query and retrieve the result
-$result = $conn->query($finalQuery);
+$result = $conn->query($query);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while ($row = $result->fetch_assoc()) {
+        echo $_GET['callback']."(".(json_encode($row['route_map'])).")";
+    }
+}

@@ -20,7 +20,7 @@
             padding: 0;
         }
     </style>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAudcLsRCpIcU_dRsKeL3fAMAkhyI6kUf8&callback=initMap" async defer></script>
 
     <script>
@@ -39,14 +39,20 @@
 
         function fetchdata()
         {
-            var jax = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-            jax.open('GET','process2.php');
-            jax.send('route_no=fetch');
-            jax.onreadystatechange = function(){ if(jax.readyState==4) {
-                alert(jax.responseText);
-                try { setroute( eval('(' + jax.responseText + ')') ); }
-                catch(e){ alert(e); }
-            }}
+            var route_no = 2;
+
+            jQuery.ajax({
+                type: "GET",
+                dataType: 'jsonp',
+                url: "http://localhost/applications/FindMyBus/Test-project/Backend/BusRouteMap/busRouteMapLoader.php?" +
+                "route_no="+route_no,
+                success: function (obj, textstatus) {
+
+                    alert(obj);
+                    try { setroute( eval('(' + obj + ')') ); }
+                    catch(e){ alert(e); }
+                }
+            });
         }
         function setroute(os)
         {

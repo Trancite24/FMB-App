@@ -121,7 +121,7 @@
         }
 
         function createRoute(){
-            ser.route({ 'origin': new google.maps.LatLng(startLat, startLong), 'destination':  new google.maps.LatLng(endLat, endLong), 'travelMode': google.maps.DirectionsTravelMode.DRIVING},function(res,sts) {
+            ser.route({ 'origin': new google.maps.LatLng(8.236302, 79.765648), 'destination':  new google.maps.LatLng(6.9336956, 79.8502888   ), 'travelMode': google.maps.DirectionsTravelMode.DRIVING},function(res,sts) {
                 if(sts=='OK')ren.setDirections(res);
             })
         }
@@ -137,19 +137,20 @@
             for(var i=0;i<wp.length;i++)w[i] = [wp[i].lat(),wp[i].lng()]
             data.waypoints = w;
 
-            var str = JSON.stringify(data)
+            var str = JSON.stringify(data);
+            console.log(str);
 
-            var jax = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-            jax.open('POST','busRouteMapSaver.php');
-            jax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-            jax.send('route_map='+str+ '&start_lat='+startLat+'&start_long='+startLong+'&start='+startLocation+
-            '&destination='+endLocation+'&route_no='+route_no+'&dest_lat='+endLat+'&dest_long='+endLong);
-            alert(str);
-            jax.onreadystatechange = function(){ if(jax.readyState==4) {
-
-                if(jax.responseText.indexOf('updated')+1)alert('Updated');
-                else alert(jax.responseText)
-            }}
+//            var jax = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+//            jax.open('POST','busRouteMapSaver.php');
+//            jax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+//            jax.send('route_map='+str+ '&start_lat='+startLat+'&start_long='+startLong+'&start='+startLocation+
+//            '&destination='+endLocation+'&route_no='+route_no+'&dest_lat='+endLat+'&dest_long='+endLong);
+//            alert(str);
+//            jax.onreadystatechange = function(){ if(jax.readyState==4) {
+//
+//                if(jax.responseText.indexOf('updated')+1)alert('Updated');
+//                else alert(jax.responseText)
+//            }}
         }
     </script>
 
@@ -163,6 +164,9 @@
 <br>
 <div>
     <label for="routeNumber">Enter Route Number</label><input type="text" id="routeNumber"><br>
+</div>
+<div >
+    <input type="button" value="Check" onClick="check()">
 </div>
 <hr>
 <div>
