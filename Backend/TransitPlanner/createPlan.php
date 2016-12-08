@@ -101,6 +101,11 @@ $start_point = $_GET['start_point'];
 $end_point = $_GET['end_point'];
 $currentTime = $_GET['time'];
 
+//this will get the current dynamic time from start to end
+$start_point_location = get_lat_long($start_point);
+$end_point_location = get_lat_long($end_point);
+$temporary_time = explode(" ", getTime($start_point_location[0] ,  $end_point_location[0] ,$start_point_location[1] , $end_point_location[1]))[0];
+
 $route = $DijkstrasInstance->calculateShortestPath( $start_point , $end_point );
 //-------------------------------------------
 
@@ -110,7 +115,7 @@ $routing= explode(":" , $route)[1];
 $routing = explode("->" , $routing);
 
 $final_result = array();
-array_push($final_result , $timeForJourney); //time from start to destination
+array_push($final_result , $temporary_time); //time from start to destination
 array_push($final_result , explode(":" , $route)[1]); //sequence of address pass from start to end
 $temp = "";
 $check = false;
