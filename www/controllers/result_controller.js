@@ -30,10 +30,10 @@ var previousRoute = stations[1].substring(0,stations[1].indexOf("->"));
 
 $('#exchange_stations').append(
     '<div class="contact">'+
-    '<div class="dot z-depth-1"></div>'+
-    '<p> <div class=" btn secondary-color"> Route No: '+route_no+'</div></p>'+
-    '<p>'+route_name+'</p>'+
-    '<span>' +timeNextBusHours+' Hours '+timeNextBusMins+' Mins'+'</span>'+
+        '<div class="dot z-depth-1"></div>'+
+            '<p> <div class=" btn secondary-color"> Route No: '+route_no+'</div></p>'+
+            '<p>'+route_name+'</p>'+
+        '<span> Bus come within' +timeNextBusHours+' Hours '+timeNextBusMins+' Mins'+'</span>'+
     '</div>'
 )
 

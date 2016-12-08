@@ -38,30 +38,52 @@
 
     <script>
 
-        $(function () {
-            var autosuggest_adddresses = [];
+//        var $loading = $('#loadingDiv').hide();
+//        $(document)
+//                .ajaxStart(function () {
+//                    $loading.show();
+//                })
+//                .ajaxStop(function () {
+//                    $loading.hide();
+//                });
 
-            jQuery.ajax({
-                type: "GET",
-                dataType: 'jsonp',
-                url: "http://localhost:8888/Backend/LocationsLIst/getLocationsList.php",
-                success: function (obj, textstatus) {
-                    if (!('error' in obj)) {
-                        $.each(obj, function (index, element) {
-                            autosuggest_adddresses.push(element);
-                        });
-                        $("#from").autocomplete({
-                            source: autosuggest_adddresses
-                        });
-                        $("#to").autocomplete({
-                            source: autosuggest_adddresses
-                        });
+        $(function () {
+
+            var autoSuggest = JSON.parse(localStorage.getItem("autosuggest"));
+
+            if(autoSuggest==null){
+                var autosuggest_adddresses = [];
+
+                jQuery.ajax({
+                    type: "GET",
+                    dataType: 'jsonp',
+                    url: "http://localhost:8888/Backend/LocationsLIst/getLocationsList.php",
+                    success: function (obj, textstatus) {
+                        localStorage.setItem("autosuggest",JSON.stringify(obj));
+                        if (!('error' in obj)) {
+                            $.each(obj, function (index, element) {
+                                autosuggest_adddresses.push(element);
+                            });
+                            $("#from").autocomplete({
+                                source: autosuggest_adddresses
+                            });
+                            $("#to").autocomplete({
+                                source: autosuggest_adddresses
+                            });
+                        }
+                        else {
+                            console.log(obj.error);
+                        }
                     }
-                    else {
-                        console.log(obj.error);
-                    }
-                }
-            });
+                });
+            }else{
+                $("#from").autocomplete({
+                    source: autoSuggest
+                });
+                $("#to").autocomplete({
+                    source: autoSuggest
+                });
+            }
 
         });
 
@@ -87,6 +109,9 @@
             </div>
         </div>
 
+        <!--<div id="loadingDiv" style="display:none">-->
+            <!--<img src="../images/89.gif">-->
+        <!--</div>-->
         <!-- Main Content -->
         <div class="animated fadeinup delay-1">
 
