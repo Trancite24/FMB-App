@@ -15,7 +15,7 @@
   <link href="../css/swiper.css" rel="stylesheet" type="text/css">
   <link href="../css/swipebox.min.css" rel="stylesheet" type="text/css">
   <link href="../css/external/style.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="../controllers/result_controller.js"></script>
+
 </head>
 
 <body>
@@ -43,9 +43,9 @@
     <div class="details-grid bus2">
       <div class="details-shade ">
         <div class="details-right">
-          <h3>Time : 2 hours 21 minutes</h3>
-          <h4>Start : Kottawa</h4>
-          <h4>Destination : Borella</h4>
+          <h3 id="timeToDestination">Time : 2 hours 21 minutes</h3>
+          <h4 id="from">Start : Kottawa</h4>
+          <h4 id="to">Destination : Borella</h4>
         </div>
       </div>
     </div>
@@ -53,63 +53,19 @@
     <div class="container activity">
 
       <div class="row">
-        <div class="col s12">
-          <div class="contact">
-            <div class="dot z-depth-1">
-            </div>
-            <p> <div class=" btn secondary-color">138</div></p>
-            <p>Kottawa - Petta</p>
-            <span>6 pm - 6.30 pm</span> <br>
-            <span> Get down from Nugegoda</span>
-          </div>
+        <div class="col s12" id="exchange_stations">
 
-          <div class="contact">
-            <div class="dot z-depth-1">
-            </div>
-            <p> <div class=" btn secondary-color">145</div></p>
-            <p>Kohuwala - Nawala</p>
-            <span>6.32 pm - 7.12 pm</span> <br>
-            <span> Get down from Nawala</span>
-          </div>
-
-          <div class="contact">
-            <div class="dot z-depth-1">
-            </div>
-            <p> <div class=" btn secondary-color">112</div></p>
-            <p>Nawala - Rajagiriya</p>
-            <span>7.15 pm - 7.30 pm</span> <br>
-            <span> Get down from Rajagiriya</span>
-          </div>
-
-          <div class="contact">
-            <div class="dot z-depth-1">
-            </div>
-            <p> <div class=" btn secondary-color">174</div></p>
-            <p>Rajagiriya - Borella</p>
-            <span>7.30 pm - 8.00 pm</span> <br>
-            <span> Get down from Borella</span>
-          </div>
         </div>
       </div>
     </div>
   </div>
   <br><br>
-
-  <div class="swiper-container steps">
-    <div class="steps-controllers white-text">
-      <!-- Add Arrows -->
-      <div><a href="home.html" class="white-text">MAP</a></div>
-      <div class="white-text">PREV</div>
-      <div class="white-text">NEXT</div>
-    </div>
-  </div>
   </div>
 </div>
-      
-       
 
-    
+
 <script src="../js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../controllers/result_controller.js"></script>
 <script src="../js/jquery.swipebox.min.js"></script>
 <script src="../js/materialize.min.js"></script>
 <script src="../js/swiper.min.js"></script>

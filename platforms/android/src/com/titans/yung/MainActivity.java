@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.foodyapp.foody;
+package com.titans.yung;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

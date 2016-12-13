@@ -57,7 +57,7 @@
                 jQuery.ajax({
                     type: "GET",
                     dataType: 'jsonp',
-                    url: "http://localhost:8888/Backend/LocationsLIst/getLocationsList.php",
+                    url: "http://www.titansmora.org/findmybusfinal/LocationsLIst/getLocationsList.php",
                     success: function (obj, textstatus) {
                         localStorage.setItem("autosuggest",JSON.stringify(obj));
                         if (!('error' in obj)) {
@@ -127,15 +127,15 @@
             </div>
             <div class="w3agile banner-bottom">
                 <ul>
-                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/enter.png"
+                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/plan.png"
                                                                                  class="img-dp"
                                                                                  onclick="EnterAlert();"/></a><h6>
-                        Enter</h6></li>
+                        Time Tables</h6></li>
                     <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/search.png"
                                                                                  class="img-dp"
                                                                                  onclick="SearchAlert();"/></a><h6>
                         Search</h6></li>
-                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/plan.png" class="img-dp"
+                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/enter.png" class="img-dp"
                                                                                  onclick="PlanAlert();"/></a><h6>
                         Plan</h6></li>
                     <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/go.png" class="img-dp"

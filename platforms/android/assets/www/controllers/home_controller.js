@@ -5,20 +5,44 @@ function goContact(){
 }
 
 function goResults(){
-    window.plugins.nativepagetransitions.slide({
-        "href" : "results.html"
+    var from  = $('#from').val();
+    var to = $('#to').val();
+    var date = $('#datepicker').val();
+    var time = $('#time').val();
+
+    console.log(from+" "+to+" "+date+" "+time);
+    ftp://dimuthu@titansmora.org@ftp.titansmora.org/findmybusfinal/Connection/connection.php
+    jQuery.ajax({
+        type: "GET",
+        dataType: 'jsonp',
+        url: "http://www.titansmora.org/findmybusfinal/TransitPlanner/createPlan.php?start_point="+from+"&end_point="+to+"&time="+time,
+        success: function (obj, textstatus) {
+
+            console.log(obj);
+            if(obj.length<4){
+                localStorage.setItem("results",JSON.stringify(obj));
+                localStorage.setItem("from",from);
+                localStorage.setItem("to",to);
+                // window.plugins.nativepagetransitions.flip({
+                //     "href" : "results.html"
+                // });
+                window.location = "results.html";
+            }else{
+                alert('No direct route found.');
+            }
+
+        }
     });
+
+
+    // window.plugins.nativepagetransitions.slide({
+    //     "href" : "results.html"
+    // });
 }
 
 
 function EnterAlert(){
-    navigator.notification.alert(  // message
-        'Enter the start and destination. Optionally you can add the date and time as well.' +
-        ' Results will be based on what you are entering for these fields.',
-        null,                   // callback
-        'Enter Data',            // title
-        'Ok'                  // buttonName
-    );
+    window.location = "routes.html";
 }
 function SearchAlert(){
     navigator.notification.alert(  // message
@@ -57,3 +81,4 @@ function openModal() {
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
+

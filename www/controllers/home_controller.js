@@ -11,11 +11,11 @@ function goResults(){
     var time = $('#time').val();
 
     console.log(from+" "+to+" "+date+" "+time);
-
+    ftp://dimuthu@titansmora.org@ftp.titansmora.org/findmybusfinal/Connection/connection.php
     jQuery.ajax({
         type: "GET",
         dataType: 'jsonp',
-        url: "http://localhost:8888/Backend/TransitPlanner/createPlan.php?start_point="+from+"&end_point="+to+"&time="+time,
+        url: "http://www.titansmora.org/findmybusfinal/TransitPlanner/createPlan.php?start_point="+from+"&end_point="+to+"&time="+time,
         success: function (obj, textstatus) {
 
             console.log(obj);
@@ -42,13 +42,7 @@ function goResults(){
 
 
 function EnterAlert(){
-    navigator.notification.alert(  // message
-        'Enter the start and destination. Optionally you can add the date and time as well.' +
-        ' Results will be based on what you are entering for these fields.',
-        null,                   // callback
-        'Enter Data',            // title
-        'Ok'                  // buttonName
-    );
+    window.location = "routes.html";
 }
 function SearchAlert(){
     navigator.notification.alert(  // message

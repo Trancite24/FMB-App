@@ -44,7 +44,7 @@
             jQuery.ajax({
                 type: "GET",
                 dataType: 'jsonp',
-                url: "http://localhost:8888/Backend/BusRouteMap/busRouteMapLoader.php?" +
+                url: "http://localhost/Test-project/Backend/BusRouteMap/busRouteMapLoader.php?" +
                 "route_no="+route_no,
                 success: function (obj, textstatus) {
                     try { setroute( eval('(' + obj + ')') ); }
