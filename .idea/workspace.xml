@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84acd480-e61c-4979-a8d8-15a008e896cf" name="Default" comment="just ignore">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/FMB.iml" afterPath="$PROJECT_DIR$/.idea/FMB.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend/TransitPlanner/createPlan.php" afterPath="$PROJECT_DIR$/Backend/TransitPlanner/createPlan.php" />
-    </list>
+    <list default="true" id="84acd480-e61c-4979-a8d8-15a008e896cf" name="Default" comment="just ignore" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -355,7 +352,7 @@
       <workItem from="1481132664567" duration="95000" />
       <workItem from="1481133014730" duration="3714000" />
       <workItem from="1481206779768" duration="92000" />
-      <workItem from="1481211445965" duration="588000" />
+      <workItem from="1481211445965" duration="1165000" />
     </task>
     <task id="LOCAL-00001" summary="just ignore">
       <created>1481132707681</created>
@@ -375,7 +372,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31300000" />
+    <option name="totallyTimeSpent" value="31877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
