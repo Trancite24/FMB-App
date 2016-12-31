@@ -1,5 +1,7 @@
 function goHome(){
-    window.plugins.nativepagetransitions.flip({
-        "href" : "home.html"
-    });
+    window.history.back();
+}
+
+function storeEmail(){
+    //store email to database
 }

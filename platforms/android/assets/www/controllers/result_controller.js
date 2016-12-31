@@ -1,13 +1,9 @@
 function goContact(){
-    window.plugins.nativepagetransitions.flip({
-        "href" : "contact.html"
-    });
+    window.location = "contact.html";
 }
 
 function goHome(){
-    window.plugins.nativepagetransitions.slide({
-        "href" : "home.html"
-    });
+    window.history.back();
 }
 
 var results = JSON.parse(localStorage.getItem("results"));
@@ -33,7 +29,7 @@ $('#exchange_stations').append(
         '<div class="dot z-depth-1"></div>'+
             '<p> <div class=" btn secondary-color"> Route No: '+route_no+'</div></p>'+
             '<p>'+route_name+'</p>'+
-        '<span> Bus come within' +timeNextBusHours+' Hours '+timeNextBusMins+' Mins'+'</span>'+
+        '<span> Bus come within ' +timeNextBusHours+' Hours '+timeNextBusMins+' Mins'+'</span>'+
     '</div>'
 )
 

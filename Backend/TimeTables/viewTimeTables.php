@@ -9,7 +9,7 @@ $timetable_name = 'r0'.$route_no.'_'.strtolower ($start).'_'.strtolower($end).'_
 //r02_galle_colombo_timetable
 
 //get route name
-$query = "SELECT * FROM $timetable_name";
+$query = "SELECT * FROM `$timetable_name`";
 $result = $conn->query($query);
 
 $resultArray = array();

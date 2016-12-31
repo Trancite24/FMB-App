@@ -1,9 +1,20 @@
-<!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
+    <title>Yung</title>
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Icons -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <!-- Styles -->
+    <link href="../css/keyframes.css" rel="stylesheet" type="text/css">
+    <link href="../css/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="../css/swipebox.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/external/style.css" rel="stylesheet" type="text/css">
 
     <style>
         /* Always set the map height explicitly to define the size of the div
@@ -39,7 +50,7 @@
 
         function fetchdata()
         {
-            var route_no = localStorage.getItem("bus_route_timetable_route_no");
+            var route_no = localStorage.getItem("bus_route_no");
 
             jQuery.ajax({
                 type: "GET",
@@ -69,12 +80,44 @@
 
 
     </script>
-
 </head>
 
 <body>
+<div class="m-scene" id="main"> <!-- Main Container -->
+    <!-- Page Content -->
+    <div id="content" class="page">
 
-<div id="adminMap"></div>
+        <!-- Toolbar -->
+        <div id="toolbar" class="primary-color">
+            <div class="open-left">
+                <i class="ion-arrow-left-c" onclick="goHome()"></i>
+            </div>
+            <span class="title"> Yung </span>
+            <div class="open-right">
+                 <i class="ion-android-menu" onclick="goContact()"></i>
+            </div>
+        </div>
 
+        <!-- Main Content -->
+
+        <!-- Activity Content -->
+        <div class="animated fadeinup delay-1">
+            <div id="adminMap"></div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../controllers/bus_halt_list_controller.js"></script>
+<script src="../js/jquery.swipebox.min.js"></script>
+<script src="../js/materialize.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/jquery.mixitup.min.js"></script>
+<script src="../js/masonry.min.js"></script>
+<script src="../js/chart.min.js"></script>
+<script src="../js/functions.js"></script>
+<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
 </body>
 </html>

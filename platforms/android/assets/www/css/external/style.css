@@ -770,6 +770,16 @@ p {
     -webkit-appearance: none;
     margin: 10px 0 12px 0;
 }
+.bnr-center_full input[type="text"] {
+    width: 95%;
+    color: #777;
+    outline: none;
+    font-size: 14px;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    margin: 10px 0 12px 0;
+}
 .ban-top .inputLabel,.ban-bottom  .inputLabel {
     display: block;
     font-weight: 600;
@@ -788,6 +798,11 @@ p {
 .bnr-left {
     float: left;
     width:50%;
+    position:relative;
+}
+.bnr-center_full {
+    float: left;
+    width:100%;
     position:relative;
 }
 .bnr-center {
@@ -2965,6 +2980,12 @@ td.price.us {
         padding: 6px 6px;
         margin: 10px 0 12px 0;
     }
+    .bnr-center_full input[type="text"] {
+        width: 95%;
+        font-size: 14px;
+        padding: 6px 6px;
+        margin: 10px 0 12px 0;
+    }
     .bnr-right input[type="text"] {
         width: 95%;
         font-size: 14px;
@@ -3433,6 +3454,12 @@ td.price.us {
         margin-bottom: 0.5em;
     }
     .bnr-left input[type="text"] {
+        width: 95%;
+        font-size: 14px;
+        padding: 6px 6px;
+        margin: 10px 0 12px 0;
+    }
+    .bnr-center_full input[type="text"] {
         width: 95%;
         font-size: 14px;
         padding: 6px 6px;

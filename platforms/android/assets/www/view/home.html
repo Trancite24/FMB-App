@@ -32,24 +32,25 @@
         });
     </script>
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../css/external/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
     <script>
 
-//        var $loading = $('#loadingDiv').hide();
-//        $(document)
-//                .ajaxStart(function () {
-//                    $loading.show();
-//                })
-//                .ajaxStop(function () {
-//                    $loading.hide();
-//                });
+        var $loading = $('#loadingDiv').hide();
+        $(document)
+                .ajaxStart(function () {
+                    $loading.show();
+                })
+                .ajaxStop(function () {
+                    $loading.hide();
+                });
 
         $(function () {
 
             var autoSuggest = JSON.parse(localStorage.getItem("autosuggest"));
+
 
             if(autoSuggest==null){
                 var autosuggest_adddresses = [];
@@ -58,18 +59,22 @@
                     type: "GET",
                     dataType: 'jsonp',
                     url: "http://www.titansmora.org/findmybusfinal/LocationsLIst/getLocationsList.php",
-                    success: function (obj, textstatus) {
+                    success: function (obj) {
                         localStorage.setItem("autosuggest",JSON.stringify(obj));
                         if (!('error' in obj)) {
                             $.each(obj, function (index, element) {
                                 autosuggest_adddresses.push(element);
+                                $('#cities').append(
+                                    '<option value=' + '"' + element + '"' + '></option>');
                             });
-                            $("#from").autocomplete({
-                                source: autosuggest_adddresses
-                            });
-                            $("#to").autocomplete({
-                                source: autosuggest_adddresses
-                            });
+
+
+//                            $("#from").autocomplete({
+//                                source: autosuggest_adddresses
+//                            });
+//                            $("#to").autocomplete({
+//                                source: autosuggest_adddresses
+//                            });
                         }
                         else {
                             console.log(obj.error);
@@ -77,12 +82,17 @@
                     }
                 });
             }else{
-                $("#from").autocomplete({
-                    source: autoSuggest
-                });
-                $("#to").autocomplete({
-                    source: autoSuggest
-                });
+                for (var i = 0; i < autoSuggest.length; i++) {
+                    $('#cities').append(
+                        '<option value=' + '"' + autoSuggest[i] + '"' + '></option>');
+                }
+//                $("#from").autocomplete({
+//                    source: autoSuggest
+//                });
+//                $("#to").autocomplete({
+//                    source: autoSuggest
+//                });
+//                alert(autoSuggest);
             }
 
         });
@@ -90,8 +100,8 @@
 
     </script>
     <!-- web-fonts -->
-    <link href='//fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+    <link href='../css/external/google_fonts_abril_fatface.css' rel='stylesheet' type='text/css'>
+    <link href='../css/external/google_fonts_open_sans.css'
           rel='stylesheet' type='text/css'>
     <!-- //web-fonts -->
 </head>
@@ -103,15 +113,18 @@
 
         <!-- Toolbar -->
         <div id="toolbar" class="primary-color">
-            <span class="title1"> Yung </span>
+            <!--<div class="open-left">-->
+                <!--<i class="ion-arrow-left-c" onclick="goHome()"></i>-->
+            <!--</div>-->
+            <span class="title"> Yung </span>
             <div class="open-right">
-                <i class="ion-android-menu" onclick="goContact();"></i>
+                <i class="ion-android-menu" onclick="goContact()"></i>
             </div>
         </div>
 
-        <!--<div id="loadingDiv" style="display:none">-->
-            <!--<img src="../images/89.gif">-->
-        <!--</div>-->
+        <div id="loadingDiv" style="display:none">
+            <img src="../images/89.gif">
+        </div>
         <!-- Main Content -->
         <div class="animated fadeinup delay-1">
 
@@ -121,7 +134,7 @@
                     <div class="details-right">
                         <img src="../images/logo.png" alt=" ">
                         <h3>Plan Your Journey</h3>
-                        <h4>You are never lost with us.</h4>
+                        <h4>You Are Never Lost</h4>
                     </div>
                 </div>
             </div>
@@ -129,55 +142,49 @@
                 <ul>
                     <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/plan.png"
                                                                                  class="img-dp"
-                                                                                 onclick="EnterAlert();"/></a><h6>
-                        Time Tables</h6></li>
+                                                                                 onclick="timeTableWindow();"/></a><h6>
+                        Time Table</h6></li>
+                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/enter.png" class="img-dp"
+                                                                                 onclick="transitPlanWindow();"/></a><h6>
+                        Transit</h6></li>
+                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/go.png" class="img-dp"
+                                                                                 onclick="busSearchWindow();"/></a><h6>Buses</h6>
+                    </li>
                     <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/search.png"
                                                                                  class="img-dp"
-                                                                                 onclick="SearchAlert();"/></a><h6>
-                        Search</h6></li>
-                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/enter.png" class="img-dp"
-                                                                                 onclick="PlanAlert();"/></a><h6>
-                        Plan</h6></li>
-                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/go.png" class="img-dp"
-                                                                                 onclick="GoAlert();"/></a><h6>Go</h6>
-                    </li>
+                                                                                 onclick="RoutesWindow();"/></a><h6>
+                        Routes</h6></li>
                 </ul>
             </div>
             <!-- //banner -->
             <!--bus -->
 
+
+
             <div class="w3agile contact">
                 <div class="book-a-ticket">
                     <div class=" bann-info">
                         <div class="ban-top">
-                            <div class="bnr-left">
-                                <label class="inputLabel">From</label>
-                                <input class="city" id="from" type="text" value="Enter a city"
+                            <div class="bnr-center_full">
+                                <label for="from" class="inputLabel">From</label>
+                                <input autocomplete="on" list="cities" class="city" id="from" type="text" value="Enter a city"
                                        onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Enter a city';}" required="">
                             </div>
-                            <div class="bnr-left">
-                                <label class="inputLabel">To</label>
-                                <input class="city" id="to" type="text" value="Enter a city"
-                                       onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Enter a city';}" required="">
-                            </div>
+
                             <div class="clearfix"></div>
                         </div>
                         <div class="ban-bottom">
-                            <div class="bnr-right">
-                                <label class="inputLabel">Date of Journey</label>
-                                <input class="date" id="datepicker" type="text" value="dd-mm-yyyy"
+                            <div class="bnr-center_full">
+                                <label for="to" class="inputLabel">To</label>
+                                <input autocomplete="on" list="cities" class="city" id="to" type="text" value="Enter a city"
                                        onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}" required=>
+                                       onblur="if (this.value == '') {this.value = 'Enter a city';}" required="">
                             </div>
-                            <div class="bnr-right">
-                                <label class="inputLabel">Time of Journey</label>
-                                <input class="date" id="time" type="text" value="hh-mm" onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'hh-mm';}" required=>
-                            </div>
+
                             <div class="clearfix"></div>
                         </div>
+                        <datalist id="cities"></datalist>
                         <div class="search">
                             <input type="submit" value="Search" onclick="goResults();">
                         </div>

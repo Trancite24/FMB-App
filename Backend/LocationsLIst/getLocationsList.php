@@ -16,7 +16,7 @@ $finalQuery = '';
 $currentCount = 1;
 
 foreach ($tableList as &$name) {
-    $finalQuery .= 'SELECT halt_one , halt_two FROM ' . $name;
+    $finalQuery .= "SELECT halt_one , halt_two FROM `$name`";
     //if there more tables to be joined
     if ($currentCount < count($tableList)) {
         $finalQuery .= ' UNION ';
