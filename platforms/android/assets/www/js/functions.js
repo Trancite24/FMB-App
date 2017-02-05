@@ -40,8 +40,8 @@ $('#open-left').sideNav({
     closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
 });
 
-// Swipebox
-$('.swipebox').swipebox();
+// // Swipebox
+// $('.swipebox').swipebox();
 
 // Masonry
 $('.grid').masonry({

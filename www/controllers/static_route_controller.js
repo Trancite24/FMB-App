@@ -14,7 +14,7 @@ function getStaticRoute(){
         url: "http://www.titansmora.org/findmybusfinal/BusRouteMap/getRouteLocations.php?route_no=" + route_no,
         success: function (obj, textstatus) {
             localStorage.setItem("bus_halt_list",JSON.stringify(obj));
-            window.location = "bushaltlist.html";
+            window.location = "busHaltList.html";
         }
     });
 }

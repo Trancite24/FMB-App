@@ -28,12 +28,12 @@
     <link href="../css/swiper.css" rel="stylesheet" type="text/css">
     <link href="../css/swipebox.min.css" rel="stylesheet" type="text/css">
     <script src="../js/external/modernizr.custom.js"></script>
-    <script src="../js/external/bigSlide.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.menu-link').bigSlide();
-        });
-    </script>
+    <!--<script src="../js/external/bigSlide.js"></script>-->
+    <!--<script>-->
+        <!--$(document).ready(function () {-->
+            <!--$('.menu-link').bigSlide();-->
+        <!--});-->
+    <!--</script>-->
 
     <link rel="stylesheet" href="../css/external/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -57,7 +57,7 @@
                     type: "GET",
                     dataType: 'jsonp',
                     url: "http://www.titansmora.org/findmybusfinal/TimeTables/getRoutes.php",
-                    success: function (obj, textstatus) {
+                    success: function (obj) {
                         if (!('error' in obj)) {
                             $.each(obj, function (index, element) {
                                 $('#routes').append(
@@ -79,6 +79,28 @@
 
 
     </script>
+    <!--The loading icon css settings for this file-->
+    <style>
+        .no-js #loader { display: none;  }
+        .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+        .se-pre-con {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(../images/89.gif) center no-repeat #fff;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script>
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");
+        });
+    </script>
     <!-- web-fonts -->
     <link href='../css/external/google_fonts_abril_fatface.css' rel='stylesheet' type='text/css'>
     <link href='../css/external/google_fonts_open_sans.css'
@@ -89,15 +111,16 @@
 </head>
 
 <body>
+<div class="se-pre-con"></div>
 <div class="m-scene" id="main"> <!-- Main Container -->
     <!-- Page Content -->
     <div id="content" class="page">
 
         <!-- Toolbar -->
         <div id="toolbar" class="primary-color">
-            <!--<div class="open-left">-->
-                <!--<i class="ion-arrow-left-c" onclick="goHome()"></i>-->
-            <!--</div>-->
+            <div class="open-left">
+
+            </div>
             <span class="title"> Yung </span>
             <div class="open-right">
                 <i class="ion-android-menu" onclick="goContact();"></i>
@@ -202,11 +225,11 @@
         });
     });
 </script>
-<script>
-    $(function () {
-        $("#datepicker,#datepicker1").datepicker();
-    });
-</script>
+<!--<script>-->
+    <!--$(function () {-->
+        <!--$("#datepicker,#datepicker1").datepicker();-->
+    <!--});-->
+<!--</script>-->
 <!--//pop-up-box -->
 <script src="../js/external/bootstrap.min.js"></script>
 <script src="../js/external/jquery.nicescroll.js"></script>
