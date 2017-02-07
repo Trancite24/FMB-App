@@ -54,7 +54,7 @@
             </div>
             <span class="title"> Yung </span>
             <div class="open-right">
-                <!--<i class="ion-android-menu" onclick="goContact()"></i>-->
+                <i class="ion-android-menu" onclick="goContact()"></i>
             </div>
         </div>
 
@@ -63,33 +63,16 @@
         <!-- Activity Content -->
         <div class="animated fadeinup delay-1">
 
-            <br><br><br>
-            <br>
-            <div class="search">
-                <input style="width: 300px;" type="submit" value="Features" onclick="goFeaturesPage();">
+            <br><br>
+            <div class="details-grid bus2">
+                <div class="details-shade ">
+                    <div class="details-right">
+                        <h3 id="timeToDestination"></h3>
+                        <h4 id="from"></h4>
+                        <h4 id="to"></h4>
+                    </div>
+                </div>
             </div>
-            <div class="search">
-                <input style="width: 300px;" type="submit" value="About Us" onclick="goAboutPage();">
-            </div>
-            <div class="search">
-                <input style="width: 300px;" type="submit" value="Contact Us" onclick="goContactUsPage();">
-            </div>
-            <div class="search">
-                <input style="width: 300px;" type="submit" value="Rate this app" onclick="rateUs();">
-            </div>
-
-            <div class="search">
-                <input style="width: 300px;" type="submit" value="Go Back" onclick="back();">
-            </div>
-            <!--<div class="details-grid bus2">-->
-                <!--<div class="details-shade ">-->
-                    <!--<div class="details-right">-->
-                        <!--<h3 id="timeToDestination"></h3>-->
-                        <!--<h4 id="from"></h4>-->
-                        <!--<h4 id="to"></h4>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
 
             <div class="container activity">
 
@@ -101,19 +84,19 @@
             </div>
         </div>
         <br><br><br>
-        <!--<div class="swiper-container steps">-->
-            <!--<div class="steps-controllers white-text" align="center" style="padding-left: 40%">-->
-                <!--&lt;!&ndash; Add Arrows &ndash;&gt;-->
-                <!--<div align="center" id="view_map">-->
-                    <!--<a onclick="viewMap()" class="white-text" style="text-align: center">MAP</a></div>-->
-            <!--</div>-->
-        <!--</div>-->
+        <div class="swiper-container steps">
+            <div class="steps-controllers white-text" align="center" style="padding-left: 40%">
+                <!-- Add Arrows -->
+                <div align="center" id="view_map">
+                    <a onclick="viewMap()" class="white-text" style="text-align: center">MAP</a></div>
+            </div>
+        </div>
     </div>
 </div>
 
 
 <script src="../js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript" src="../controllers/menupage_controller.js"></script>
+<script type="text/javascript" src="../controllers/feature_controller.js"></script>
 <script src="../js/jquery.swipebox.min.js"></script>
 <script src="../js/materialize.min.js"></script>
 <script src="../js/swiper.min.js"></script>
@@ -121,6 +104,6 @@
 <script src="../js/masonry.min.js"></script>
 <script src="../js/chart.min.js"></script>
 <script src="../js/functions.js"></script>
-<!--<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>-->
+<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
 </body>
 </html>
