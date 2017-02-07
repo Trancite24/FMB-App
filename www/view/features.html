@@ -54,7 +54,7 @@
             </div>
             <span class="title"> Yung </span>
             <div class="open-right">
-                <i class="ion-android-menu" onclick="goContact()"></i>
+                <!--<i class="ion-android-menu" onclick="goContact()"></i>-->
             </div>
         </div>
 
@@ -64,39 +64,84 @@
         <div class="animated fadeinup delay-1">
 
             <br><br>
-            <div class="details-grid bus2">
-                <div class="details-shade ">
-                    <div class="details-right">
-                        <h3 id="timeToDestination"></h3>
-                        <h4 id="from"></h4>
-                        <h4 id="to"></h4>
-                    </div>
-                </div>
-            </div>
+            <!--<div class="details-grid bus2">-->
+                <!--<div class="details-shade ">-->
+                    <!--<div class="details-right">-->
+                        <!--<h3 id="timeToDestination"></h3>-->
+                        <!--<h4 id="from"></h4>-->
+                        <!--<h4 id="to"></h4>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <br>
+            <br>
+
 
             <div class="container activity">
 
                 <div class="row">
                     <div class="col s12" id="exchange_stations">
 
+                        <div class="contact">
+                            <div class="dot z-depth-1"></div>
+                            <p><b>BUS LOCATION</b></p>
+                            <p>Realtime GPS location and Smart Tracking</p>
+                        </div>
+                        <div class="contact">
+                            <div class="dot z-depth-1"></div>
+                            <p><b>NOTIFICATION</b></p>
+                            <p>Bus arrival notification to passenger</p>
+                        </div>
+                        <div class="contact">
+                            <div class="dot z-depth-1"></div>
+                            <p><b>BOOKING</b></p>
+                            <p>Bus seat booking via mobile platform</p>
+                        </div>
+                        <div class="contact">
+                            <div class="dot z-depth-1"></div>
+                            <p><b>PLANNING</b></p>
+                            <p>Efficient Journey Planning</p>
+                        </div>
+                        <div class="contact">
+                            <div class="dot z-depth-1"></div>
+                            <p><b>FORECAST</b></p>
+                            <p>Estimated Travel Time according to traffic situations</p>
+                        </div>
+                        <div class="contact">
+                            <div class="dot z-depth-1"></div>
+                            <p><b>QUALITY</b></p>
+                            <p>Customer Satisfaction, Rating and Feedback</p>
+                        </div>
+
+                        <!--$('#exchange_stations').append(-->
+                        <!--'<div class="contact">'+-->
+                        <!--'<div class="dot z-depth-1"></div>'+-->
+                        <!--'<p>'+element+'</p>'+-->
+                        <!--'</div>'-->
+                        <!--)-->
+
+                    </div>
+
+                    <div class="search">
+                        <input style="width: 300px;" type="submit" value="Back" onclick="goHome();">
                     </div>
                 </div>
             </div>
         </div>
         <br><br><br>
-        <div class="swiper-container steps">
-            <div class="steps-controllers white-text" align="center" style="padding-left: 40%">
-                <!-- Add Arrows -->
-                <div align="center" id="view_map">
-                    <a onclick="viewMap()" class="white-text" style="text-align: center">MAP</a></div>
-            </div>
-        </div>
+        <!--<div class="swiper-container steps">-->
+            <!--<div class="steps-controllers white-text" align="center" style="padding-left: 40%">-->
+                <!--&lt;!&ndash; Add Arrows &ndash;&gt;-->
+                <!--<div align="center" id="view_map">-->
+                    <!--<a onclick="viewMap()" class="white-text" style="text-align: center">MAP</a></div>-->
+            <!--</div>-->
+        <!--</div>-->
     </div>
 </div>
 
 
 <script src="../js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript" src="../controllers/feature_controller.js"></script>
+<script type="text/javascript" src="../controllers/menupage_controller.js"></script>
 <script src="../js/jquery.swipebox.min.js"></script>
 <script src="../js/materialize.min.js"></script>
 <script src="../js/swiper.min.js"></script>

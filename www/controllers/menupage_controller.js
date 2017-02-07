@@ -15,7 +15,7 @@ function rateUs(){
 }
 
 function goFeaturesPage(){
-    window.location = "contact.html";
+    window.location = "features.html";
 }
 
 function back(){
