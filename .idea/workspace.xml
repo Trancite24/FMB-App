@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="faea82d5-33cd-449e-a1e0-9ad33551352f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/view/timeTables.html" afterPath="$PROJECT_DIR$/www/view/timeTables.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/controllers/bus_halt_list_controller.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/controllers/bus_halt_list_controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/view/busHaltList.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/view/busHaltList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/view/timeTables.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/view/timeTables.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/view/viewBusRoute.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/view/viewBusRoute.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/view/transit.html" afterPath="$PROJECT_DIR$/www/view/transit.html" />
     </list>
     <ignored path="Test-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,11 +69,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timeTables.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/view/timeTables.html">
+      <file leaf-file-name="transit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/view/transit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+            <state relative-caret-position="220">
+              <caret line="10" column="94" lean-forward="false" selection-start-line="10" selection-start-column="94" selection-end-line="10" selection-end-column="94" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="busmap.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/view/busmap.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -119,7 +137,6 @@
         <option value="$PROJECT_DIR$/platforms/android/release-signing.properties" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/view/home.html" />
-        <option value="$PROJECT_DIR$/www/view/transit.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/www/controllers/home_controller.js" />
         <option value="$PROJECT_DIR$/www/controllers/feature_controller.js" />
@@ -136,6 +153,7 @@
         <option value="$PROJECT_DIR$/www/controllers/bus_halt_list_controller.js" />
         <option value="$PROJECT_DIR$/www/view/viewBusRoute.html" />
         <option value="$PROJECT_DIR$/www/view/timeTables.html" />
+        <option value="$PROJECT_DIR$/www/view/transit.html" />
       </list>
     </option>
   </component>
@@ -341,12 +359,12 @@
       <workItem from="1486218780438" duration="2650000" />
       <workItem from="1486299524990" duration="765000" />
       <workItem from="1486462636154" duration="50000" />
-      <workItem from="1486462708261" duration="12201000" />
+      <workItem from="1486462708261" duration="12756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21389000" />
+    <option name="totallyTimeSpent" value="21944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -406,7 +424,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/view/routes.html" />
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -569,13 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5302">
           <caret line="241" column="0" lean-forward="false" selection-start-line="241" selection-start-column="4" selection-end-line="245" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/view/transit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="222" column="79" lean-forward="false" selection-start-line="222" selection-start-column="79" selection-end-line="222" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -770,6 +780,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/view/staticRoute.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/view/timeTables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/view/menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -784,18 +810,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/view/staticRoute.html">
+    <entry file="file://$PROJECT_DIR$/www/view/transit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="220">
+          <caret line="10" column="94" lean-forward="false" selection-start-line="10" selection-start-column="94" selection-end-line="10" selection-end-column="94" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/view/timeTables.html">
+    <entry file="file://$PROJECT_DIR$/www/view/busmap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
