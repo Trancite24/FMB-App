@@ -16,7 +16,7 @@ function goResults(){
     var to = $('#to').val();
 
     console.log(from+" "+to);
-    ftp://dimuthu@titansmora.org@ftp.titansmora.org/findmybusfinal/Connection/connection.php
+    //ftp://dimuthu@titansmora.org@ftp.titansmora.org/findmybusfinal/Connection/connection.php
     jQuery.ajax({
         type: "GET",
         dataType: 'jsonp',

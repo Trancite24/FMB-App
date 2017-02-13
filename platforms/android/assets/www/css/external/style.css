@@ -761,7 +761,7 @@ p {
     cursor: pointer;
 }
 .bnr-left input[type="text"] {
-    width: 95%;
+    width: 98%;
     color: #777;
     outline: none;
     font-size: 14px;
@@ -771,7 +771,7 @@ p {
     margin: 10px 0 12px 0;
 }
 .bnr-center_full input[type="text"] {
-    width: 95%;
+    width: 100%;
     color: #777;
     outline: none;
     font-size: 14px;
@@ -2975,13 +2975,13 @@ td.price.us {
         margin-bottom: 0.5em;
     }
     .bnr-left input[type="text"] {
-        width: 95%;
+        width: 98%;
         font-size: 14px;
         padding: 6px 6px;
         margin: 10px 0 12px 0;
     }
     .bnr-center_full input[type="text"] {
-        width: 95%;
+        width: 100%;
         font-size: 14px;
         padding: 6px 6px;
         margin: 10px 0 12px 0;
@@ -3454,13 +3454,13 @@ td.price.us {
         margin-bottom: 0.5em;
     }
     .bnr-left input[type="text"] {
-        width: 95%;
+        width: 98%;
         font-size: 14px;
         padding: 6px 6px;
         margin: 10px 0 12px 0;
     }
     .bnr-center_full input[type="text"] {
-        width: 95%;
+        width: 100%;
         font-size: 14px;
         padding: 6px 6px;
         margin: 10px 0 12px 0;
@@ -3699,11 +3699,11 @@ td.price.us {
     position: relative;
 }
 .open-right {
-    padding: 16px;
+    padding-top: 16px;
+    padding-right: 16px;
     float: right;
     height: 56px;
     line-height: 56px;
-    width: 56px;
     text-align: center;
     position: relative;
 }
@@ -3717,7 +3717,6 @@ td.price.us {
     font-weight: 500;
     color: #fff;
     line-height: 56px;
-    margin-left: 27%;
     text-transform: none;
     letter-spacing: normal;
 }
