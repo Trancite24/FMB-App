@@ -1,5 +1,5 @@
 function goContact(){
-    window.location = "contact.html"
+    window.location = "menu.html"
 }
 
 function goHome(){
