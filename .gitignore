@@ -1,8 +1,7 @@
 # idea files
-.idea/
+.idea
 
 #ignore plugins folder
 plugins/
 
-.gitignore
 platforms
