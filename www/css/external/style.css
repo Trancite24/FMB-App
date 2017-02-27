@@ -3689,7 +3689,7 @@ td.price.us {
     right: 0;
     z-index: 3;
 }
-.open-left {
+#toolbar .open-left {
     padding: 16px;
     float: left;
     height: 56px;
@@ -3698,7 +3698,7 @@ td.price.us {
     text-align: center;
     position: relative;
 }
-.open-right {
+#toolbar .open-right {
     padding-top: 16px;
     padding-right: 16px;
     float: right;
@@ -3719,6 +3719,8 @@ td.price.us {
     line-height: 56px;
     text-transform: none;
     letter-spacing: normal;
+    margin:0 auto;
+    width:100px;
 }
 #toolbar .title1 {
     font-size: 22px;
