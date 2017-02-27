@@ -3723,6 +3723,18 @@ td.price.us {
     display: inline-block;
     padding-left: 10px;
 }
+#toolbar .title2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 56px;
+    text-transform: none;
+    letter-spacing: normal;
+    margin:0 auto;
+    display: inline-block;
+    padding-right: 10px;
+
+}
 #toolbar .title1 {
     font-size: 22px;
     font-weight: 500;
