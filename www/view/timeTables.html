@@ -56,7 +56,7 @@
                     type: "GET",
                     dataType: 'jsonp',
                     url: "http://www.titansmora.org/findmybusfinal/TimeTables/getRoutes.php",
-                    success: function (obj) {
+                    success: function (obj, textstatus) {
                         if (!('error' in obj)) {
                             $.each(obj, function (index, element) {
                                 $('#routes').append(

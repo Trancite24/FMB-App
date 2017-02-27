@@ -74,7 +74,8 @@ module.exports.metadata =
     "cordova-plugin-device": "1.1.2",
     "cordova-plugin-app-event": "1.2.0",
     "de.appplant.cordova.plugin.local-notification": "0.8.4",
-    "com.telerik.plugins.nativepagetransitions": "0.6.5"
+    "com.telerik.plugins.nativepagetransitions": "0.6.5",
+    "cordova-plugin-crosswalk-webview": "2.1.0"
 };
 // BOTTOM OF METADATA
 });

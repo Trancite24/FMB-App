@@ -15,15 +15,13 @@ function goResults(){
     var from  = $('#from').val();
     var to = $('#to').val();
 
-    console.log(from+" "+to);
-    //ftp://dimuthu@titansmora.org@ftp.titansmora.org/findmybusfinal/Connection/connection.php
+    $('#loadingDiv').show();
     jQuery.ajax({
         type: "GET",
         dataType: 'jsonp',
         url: "http://www.titansmora.org/findmybusfinal/BusRouteMap/getRoutesOfLocations.php?start="+from+"&destination="+to,
         success: function (obj, textstatus) {
-
-            console.log(obj);
+            $('#loadingDiv').hide();
             if(obj.length>0){
                 localStorage.setItem("results",JSON.stringify(obj));
                 window.location = "search_result.html";

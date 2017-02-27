@@ -22,6 +22,13 @@
         <param name="android-package" value="com.telerik.plugins.nativepagetransitions.NativePageTransitions" />
         <param name="onload" value="true" />
     </feature>
+    <preference name="webView" value="org.crosswalk.engine.XWalkWebViewEngine" />
+    <preference name="xwalkVersion" value="21+" />
+    <preference name="xwalkLiteVersion" value="xwalk_core_library_canary:17+" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+    <preference name="xwalkMode" value="embedded" />
+    <preference name="xwalkMultipleApk" value="true" />
+    <preference name="android-minSdkVersion" value="16" />
     <splash density="land-hdpi" src="res/screen/android/1.png" />
     <splash density="land-ldpi" src="res/screen/android/1.png" />
     <splash density="land-mdpi" src="res/screen/android/1.png" />

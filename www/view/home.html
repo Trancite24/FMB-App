@@ -37,9 +37,14 @@
     <!--<link rel="stylesheet" href="../css/external/jquery-ui.css">-->
     <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
     <!--<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
-
+    <script src="../js/external/bigSlide.js"></script>
     <script>
+        $(document).ready(function () {
+            $('.menu-link').bigSlide();
+        });
+    </script>
 
+<<<<<<< HEAD
 //        var $loading = $('#loadingDiv').hide();
 //        $(document)
 //                .ajaxStart(function () {
@@ -48,7 +53,27 @@
 //                .ajaxStop(function () {
 //                    $loading.hide();
 //                });
+=======
+    <link rel="stylesheet" href="../css/external/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #loadingDiv {
+            cursor: wait;
+            background:#ffffff url('../images/89.gif') no-repeat center center;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+            filter: alpha(opacity=75);
+            opacity: 0.75;
+            position: absolute;
+            z-index: 10000;
+            display: none;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+>>>>>>> a89cf2312bf6f0c72b72e09d0a3078fbd6a031ac
 
+    <script>
         $(function () {
 
             var autoSuggest = JSON.parse(localStorage.getItem("autosuggest"));
@@ -132,7 +157,7 @@
 </head>
 
 <body>
-<!--<div class="se-pre-con"></div>-->
+<div id="loadingDiv" class="ajax-loader"></div>
 <div class="m-scene" id="main"> <!-- Main Container -->
     <!-- Page Content -->
     <div id="content" class="page">
@@ -146,10 +171,6 @@
             <div class="open-right">
                 <i class="ion-android-menu" onclick="goContact()"></i>
             </div>
-        </div>
-
-        <div id="loadingDiv" style="display:none">
-            <img src="../images/89.gif">
         </div>
         <!-- Main Content -->
         <div class="animated fadeinup delay-1">

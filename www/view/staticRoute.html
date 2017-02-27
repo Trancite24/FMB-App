@@ -37,7 +37,6 @@
     <!--<link rel="stylesheet" href="../css/external/jquery-ui.css">-->
     <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
     <!--<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
-
     <script>
 
 //        var $loading = $('#loadingDiv').hide();
@@ -56,7 +55,7 @@
                     type: "GET",
                     dataType: 'jsonp',
                     url: "http://www.titansmora.org/findmybusfinal/TimeTables/getRoutes.php",
-                    success: function (obj) {
+                    success: function (obj, textstatus) {
                         if (!('error' in obj)) {
                             $.each(obj, function (index, element) {
                                 $('#routes').append(
