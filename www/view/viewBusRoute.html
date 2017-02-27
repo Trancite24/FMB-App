@@ -57,7 +57,7 @@
                 dataType: 'jsonp',
                 url: "http://www.titansmora.org/findmybusfinal/BusRouteMap/busRouteMapLoader.php?" +
                 "route_no="+route_no,
-                success: function (obj, textstatus) {
+                success: function (obj) {
                     try { setroute( eval('(' + obj + ')') ); }
                     catch(e){ alert(e); }
                 }

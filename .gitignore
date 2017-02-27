@@ -1,23 +1,8 @@
-# Created by .ignore support plugin (hsz.mobi)
-.gitignore
-.idea
-platforms/android/CordovaLib/build/generated/res/
-platforms/android/CordovaLib/build/generated/source/aidl/
-platforms/android/CordovaLib/build/generated/source/r/
-platforms/android/CordovaLib/build/generated/source/rs/
-platforms/android/CordovaLib/build/intermediates/bundles/debug/aidl/
-platforms/android/CordovaLib/build/intermediates/bundles/debug/assets/
-platforms/android/CordovaLib/build/intermediates/bundles/debug/jni/
-platforms/android/CordovaLib/build/intermediates/bundles/debug/libs/
-platforms/android/CordovaLib/build/intermediates/bundles/debug/res/
-platforms/android/CordovaLib/build/intermediates/bundles/release/aidl/
-platforms/android/CordovaLib/build/intermediates/bundles/release/assets/
-platforms/android/CordovaLib/build/intermediates/bundles/release/jni/
-platforms/android/CordovaLib/build/intermediates/bundles/release/libs/
-platforms/android/CordovaLib/build/intermediates/bundles/release/res/
-platforms/android/CordovaLib/build/intermediates/dependency-cache/
-platforms/android/CordovaLib/build/intermediates/jniLibs/
-platforms/android/CordovaLib/build/intermediates/lint/
-platforms/android/CordovaLib/build/intermediates/rs/
-platforms/android/CordovaLib/build/intermediates/transforms/
-platforms/android/CordovaLib/build/tmp/
+# idea files
+.idea/
+
+#ignore android files
+platforms/
+
+#ignore plugins folder
+plugins/
