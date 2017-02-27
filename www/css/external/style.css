@@ -3720,7 +3720,8 @@ td.price.us {
     text-transform: none;
     letter-spacing: normal;
     margin:0 auto;
-    width:100px;
+    display: inline-block;
+    padding-left: 10px;
 }
 #toolbar .title1 {
     font-size: 22px;
