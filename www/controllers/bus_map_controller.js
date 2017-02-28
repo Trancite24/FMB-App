@@ -15,7 +15,8 @@ function initialize() {
     $.each(locations, function (index, value) {
 
         var busno = value[0];
-        var arrivalTime = "Keet";
+        var arrivalTime = value[3];
+        var distance = value[4];
         var crowdDensity = "Medium";
 
         if (value[1] != 0.00000) {
@@ -23,6 +24,7 @@ function initialize() {
             var infowindow = new google.maps.InfoWindow({
                 content: "<p>Bus No: "+ busno + "<br />" +
                     "Arrival Time: " + arrivalTime + "<br />" +
+                    "Distance: " + distance + "<br />" +
                     "Crowd Density: " + crowdDensity + "</p>"
             });
 

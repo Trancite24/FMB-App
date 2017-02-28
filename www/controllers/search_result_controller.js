@@ -8,7 +8,7 @@ function onload_search_result(){
         var results = JSON.parse(localStorage.getItem("results"));
 
         $.each(results, function (index, value) {
-            locations.push([value.VehNoF,value.latitude, value.logitude]);
+            locations.push([value.VehNoF,value.latitude, value.logitude, value.timeToArrive , value.distance]);
             $('#resultdiv').append("<li class=\"list-message\" data-ix=\"list-item\">" +
                 "<a class=\"w-clearfix w-inline-block result\">" +
                 "<div class=\"column-right\" style=\"padding-left: 20px\">" +
