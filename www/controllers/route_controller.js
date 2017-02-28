@@ -4,6 +4,7 @@
 
 
 function onload_routes(){
+    $('#loadingDiv').show();
     $(function () {
         var routes = [];
 
@@ -23,6 +24,10 @@ function onload_routes(){
                 else {
                     console.log(obj.error);
                 }
+                $('#loadingDiv').hide();
+            } ,
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                $('#loadingDiv').hide();
             }
         });
 

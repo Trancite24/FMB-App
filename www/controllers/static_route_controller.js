@@ -1,4 +1,5 @@
 function getStaticRoute(){
+    $('#loadingDiv').show();
     var routeData = $('#route').val().split(" ");
 
     var route_no = routeData[0];
@@ -15,11 +16,16 @@ function getStaticRoute(){
         success: function (obj, textstatus) {
             localStorage.setItem("bus_halt_list",JSON.stringify(obj));
             window.location = "bushaltlist.html";
+            $('#loadingDiv').hide();
+        } ,
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            $('#loadingDiv').hide();
         }
     });
 }
 
 function onload_static_route(){
+    $('#loadingDiv').show();
     $(function () {
 
         $(function () {
@@ -38,12 +44,13 @@ function onload_static_route(){
                     else {
                         console.log(obj.error);
                     }
+                    $('#loadingDiv').hide();
+                } ,
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    $('#loadingDiv').hide();
                 }
             });
 
         });
-
-
-
     });
 }

@@ -13,6 +13,7 @@
     <link href="../css/external/ioniconsmin.css" media="all" rel="stylesheet" type="text/css">
     <link href="../css/external/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="../css/external/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/home_page.css" rel="stylesheet" type="text/css"/>
 
     <!--Script Import-->
     <script src="../js/external/jquery-2.1.4.min.js"></script>
@@ -34,9 +35,7 @@
             </div>
         </div>
 
-        <div id="loadingDiv" style="display:none">
-            <img src="../images/89.gif">
-        </div>
+        <div id="loadingDiv" style="display:none"> </div>
         <!-- Main Content -->
         <div class="animated fadeinup delay-1">
 
@@ -56,11 +55,14 @@
                                                                                  class="img-dp"
                                                                                  onclick="timeTableWindow();"/></a><h6>
                         Time Table</h6></li>
-                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/enter.png" class="img-dp"
-                                                                                 onclick="transitPlanWindow();"/></a><h6>
-                        Transit</h6></li>
+                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/enter.png"
+                                                                                 class="img-dp"
+                                                                                 onclick="transitPlanWindow();"/></a>
+                        <h6>
+                            Transit</h6></li>
                     <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/go.png" class="img-dp"
-                                                                                 onclick="busSearchWindow();"/></a><h6>Buses</h6>
+                                                                                 onclick="busSearchWindow();"/></a><h6>
+                        Buses</h6>
                     </li>
                     <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/search.png"
                                                                                  class="img-dp"
@@ -70,13 +72,14 @@
             </div>
             <!-- //banner -->
             <!--bus -->
-         <div class="w3agile contact">
+            <div class="w3agile contact">
                 <div class="book-a-ticket">
                     <div class=" bann-info">
                         <div class="ban-top">
                             <div class="bnr-center_full">
                                 <label for="route" class="inputLabel">Enter Route</label>
-                                <input autocomplete="on" list="routes" class="city" id="route" type="text" value="Enter a route"
+                                <input autocomplete="on" list="routes" class="city" id="route" type="text"
+                                       value="Enter a route"
                                        onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Enter a route';}" required="">
                             </div>
@@ -87,24 +90,6 @@
                         <div class="search">
                             <input type="submit" value="Get Route Details" onclick="getStaticRoute();">
                         </div>
-                    </div>
-                </div>
-                <!--- /bus-tp ---->
-                <div class="w3agile bus-midd" id="route_table_div" style="display:none">
-                    <div class="table-responsive">
-                        <table class="table table-bordered agileinfo">
-                            <thead>
-                            <tr>
-                                <th>Start</th>
-                                <th>Start Time</th>
-                                <th>End</th>
-                                <th>End Time</th>
-                            </tr>
-                            </thead>
-                            <tbody id="route_table_body">
-
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>

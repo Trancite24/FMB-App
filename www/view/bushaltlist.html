@@ -14,13 +14,14 @@
     <link href="../css/keyframes.css" rel="stylesheet" type="text/css">
     <link href="../css/materialize.min.css" rel="stylesheet" type="text/css">
     <link href="../css/external/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/home_page.css" rel="stylesheet" type="text/css"/>
 
     <!--Script Imports-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 
 </head>
 
-<body>
+<body onload="onload_bushaltlist()">
 <!-- Main Container -->
 <div class="m-scene" id="main">
     <!-- Page Content -->
@@ -36,7 +37,7 @@
                 <i class="ion-android-menu" onclick="goContact()"></i>
             </div>
         </div>
-
+        <div id="loadingDiv" style="display:none"> </div>
         <!-- Main Content -->
 
         <!-- Activity Content -->

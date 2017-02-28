@@ -6,10 +6,6 @@ function goHome(){
     window.location = "home.html"
 }
 
-function getGPSData(){
-
-}
-
 function goResults(){
 
     var from  = $('#from').val();
@@ -21,14 +17,18 @@ function goResults(){
         dataType: 'jsonp',
         url: "http://www.titansmora.org/findmybusfinal/BusRouteMap/getRoutesOfLocations.php?start="+from+"&destination="+to,
         success: function (obj, textstatus) {
-            $('#loadingDiv').hide();
+
             if(obj.length>0){
                 localStorage.setItem("results",JSON.stringify(obj));
                 window.location = "search_result.html";
             }else{
                 alert('No Buses Found.');
             }
+            $('#loadingDiv').hide();
 
+        } ,
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            $('#loadingDiv').hide();
         }
     });
 
@@ -37,37 +37,22 @@ function goResults(){
 
 
 function timeTableWindow(){
+    $('#loadingDiv').show();
     window.location = "timeTables.html";
 }
 function RoutesWindow(){
+    $('#loadingDiv').show();
     window.location = "staticRoute.html";
-    // navigator.notification.alert(  // message
-    //     'Searching will give you the plans that you can use. ' +
-    //     'If you only enter start and destination, all the buses which travel between them will be given as the result.',
-    //     null,                   // callback
-    //     'Search for results',            // title
-    //     'Ok'                  // buttonName
-    // );
 }
 
 function transitPlanWindow(){
+    $('#loadingDiv').show();
     window.location = "transit.html";
-    // navigator.notification.alert(  // message
-    //     'We provide you with the most convenient routes that you can take to reach your destination in the least possible time. ',
-    //     null,                   // callback
-    //     'View the Plan',            // title
-    //     'Ok'                  // buttonName
-    // );
 }
 
 function busSearchWindow(){
+    $('#loadingDiv').show();
     window.location = "home.html";
-    // navigator.notification.alert(  // message
-    //     'Enter - Search - Plan and that\'s it, you are ready to go.',
-    //     null,                   // callback
-    //     'That\'s All',            // title
-    //     'Ok'                  // buttonName
-    // );
 }
 
 
@@ -81,6 +66,8 @@ function closeModal() {
 }
 
 function onload_autosugest(){
+
+    $('#loadingDiv').show();
     $(function () {
 
         var autoSuggest = JSON.parse(localStorage.getItem("autosuggest"));
@@ -106,6 +93,10 @@ function onload_autosugest(){
                     else {
                         console.log(obj.error);
                     }
+                    $('#loadingDiv').hide();
+                } ,
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    $('#loadingDiv').hide();
                 }
             });
         }else{
@@ -113,6 +104,7 @@ function onload_autosugest(){
                 $('#cities').append(
                     '<option value=' + '"' + autoSuggest[i] + '"' + '></option>');
             }
+            $('#loadingDiv').hide();
 
         }
 

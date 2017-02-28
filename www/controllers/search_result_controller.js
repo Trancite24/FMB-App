@@ -3,6 +3,7 @@
  */
 
 function onload_search_result(){
+    $('#loadingDiv').show();
     var locations = [];
     $(document).ready(function () {
         var results = JSON.parse(localStorage.getItem("results"));
@@ -19,9 +20,12 @@ function onload_search_result(){
                 "</li>");
         });
         localStorage.setItem("map_data",JSON.stringify(locations));
+        $('#loadingDiv').hide();
+
     });
 }
 
 function goBusMap(){
+    $('#loadingDiv').hide();
     window.location = "busmap.html";
 }

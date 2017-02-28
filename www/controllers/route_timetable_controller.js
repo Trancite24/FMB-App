@@ -1,5 +1,5 @@
 function goResults(){
-
+    $('#loadingDiv').show();
     var routeData = $('#route').val().split(" ");
 
     var route_no = routeData[0];
@@ -27,6 +27,10 @@ function goResults(){
                     '</tr>'
                 );
             }
+            $('#loadingDiv').hide();
+        } ,
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            $('#loadingDiv').hide();
         }
     });
 
@@ -37,6 +41,7 @@ function viewMap(){
 }
 
 function onload_route_timetable(){
+    $('#loadingDiv').show();
     $(function () {
 
         $(function () {
@@ -55,12 +60,16 @@ function onload_route_timetable(){
                     else {
                         console.log(obj.error);
                     }
+                    $('#loadingDiv').hide();
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    $('#loadingDiv').hide();
                 }
             });
 
         });
 
-
+;
 
     });
 }
