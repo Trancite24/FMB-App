@@ -4,3 +4,16 @@
     overflow-x: hidden; /* add padding to account for vertical scrollbar */
     z-index: 1000 !important;
 }
+
+#loadingDiv {
+    cursor: wait;
+    background:#ffffff url('../images/89.gif') no-repeat center center;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+    position: absolute;
+    z-index: 10000;
+    display: none;
+    height: 100%;
+    width: 100%;
+}

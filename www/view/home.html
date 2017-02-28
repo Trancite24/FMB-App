@@ -1,90 +1,35 @@
 <html lang="en-US">
 <head>
     <title>Yung</title>
+
+    <!--Meta Contents-->
     <meta content="IE=edge" http-equiv="x-ua-compatible">
     <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
-    <!-- Fonts -->
-    <link href="../css/external/google_fonts_open_sans_new.css" rel='stylesheet' type='text/css'>
-    <!-- Icons -->
-    <link href="../css/external/ioniconsmin.css" media="all" rel="stylesheet" type="text/css">
-    <!-- Styles -->
-    <script type="text/javascript" src="../controllers/home_controller.js"></script>
-    <!--bootstrap-->
-    <link href="../css/external/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <!--custom css-->
-    <link href="../css/external/style.css" rel="stylesheet" type="text/css"/>
-    <!--homepage-css-->
-    <link href="../css/home_page.css" rel="stylesheet" type="text/css"/>
-    <!--component-css-->
-    <script src="../js/external/jquery-2.1.4.min.js"></script>
 
-    <script src="../js/external/modernizr.custom.js"></script>
+    <!--Style Imports-->
+    <link href="../css/external/google_fonts_open_sans_new.css" rel='stylesheet' type='text/css'>
+    <link href="../css/external/ioniconsmin.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../css/external/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/external/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/home_page.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="../css/external/jquery-ui.css">
+
+    <!-- Script Imports -->
+    <script type="text/javascript" src="../controllers/home_controller.js"></script>
+    <script src="../js/external/jquery-2.1.4.min.js"></script>
+    <script src="../js/external/modernizr.custom.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-    <style>
-        #loadingDiv {
-            cursor: wait;
-            background:#ffffff url('../images/89.gif') no-repeat center center;
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-            filter: alpha(opacity=75);
-            opacity: 0.75;
-            position: absolute;
-            z-index: 10000;
-            display: none;
-            height: 100%;
-            width: 100%;
-        }
-    </style>
-    <script>
-        $(function () {
-
-            var autoSuggest = JSON.parse(localStorage.getItem("autosuggest"));
-
-
-            if(autoSuggest==null){
-                var autosuggest_adddresses = [];
-
-                jQuery.ajax({
-                    type: "GET",
-                    dataType: 'jsonp',
-                    url: "http://www.titansmora.org/findmybusfinal/LocationsLIst/getLocationsList.php",
-                    success: function (obj) {
-                        localStorage.setItem("autosuggest",JSON.stringify(obj));
-                        if (!('error' in obj)) {
-                            $.each(obj, function (index, element) {
-                                autosuggest_adddresses.push(element);
-                                $('#cities').append(
-                                    '<option value=' + '"' + element + '"' + '></option>');
-                            });
-
-                        }
-                        else {
-                            console.log(obj.error);
-                        }
-                    }
-                });
-            }else{
-                for (var i = 0; i < autoSuggest.length; i++) {
-                    $('#cities').append(
-                        '<option value=' + '"' + autoSuggest[i] + '"' + '></option>');
-                }
-
-            }
-
-        });
-
-
-    </script>
-
 </head>
 
-<body>
-<div id="loadingDiv" class="ajax-loader"></div>
-<div class="m-scene" id="main"> <!-- Main Container -->
+<body onload="onload_autosugest()">
+
+<!-- Main Container -->
+<div class="m-scene" id="main">
+
     <!-- Page Content -->
     <div id="content" class="page">
 
@@ -95,6 +40,7 @@
                 <i class="ion-android-menu" onclick="goContact()"></i>
             </div>
         </div>
+
         <!-- Main Content -->
         <div class="animated fadeinup delay-1">
 
@@ -114,11 +60,14 @@
                                                                                  class="img-dp"
                                                                                  onclick="timeTableWindow();"/></a><h6>
                         Time Table</h6></li>
-                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/enter.png" class="img-dp"
-                                                                                 onclick="transitPlanWindow();"/></a><h6>
-                        Transit</h6></li>
+                    <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/enter.png"
+                                                                                 class="img-dp"
+                                                                                 onclick="transitPlanWindow();"/></a>
+                        <h6>
+                            Transit</h6></li>
                     <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/go.png" class="img-dp"
-                                                                                 onclick="busSearchWindow();"/></a><h6>Buses</h6>
+                                                                                 onclick="busSearchWindow();"/></a><h6>
+                        Buses</h6>
                     </li>
                     <li><a class="hvr-radial-out"><i aria-hidden="true"></i><img src="../images/search.png"
                                                                                  class="img-dp"
@@ -127,17 +76,16 @@
                 </ul>
             </div>
             <!-- //banner -->
+
             <!--bus -->
-
-
-
             <div class="w3agile contact">
                 <div class="book-a-ticket">
                     <div class=" bann-info">
                         <div class="ban-top">
                             <div class="bnr-center_full">
                                 <label for="from" class="inputLabel">From</label>
-                                <input autocomplete="on" list="cities" class="city" id="from" type="text" value="Enter a city"
+                                <input autocomplete="on" list="cities" class="city" id="from" type="text"
+                                       value="Enter a city"
                                        onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Enter a city';}" required="">
                             </div>
@@ -147,7 +95,8 @@
                         <div class="ban-bottom">
                             <div class="bnr-center_full">
                                 <label for="to" class="inputLabel">To</label>
-                                <input autocomplete="on" list="cities" class="city" id="to" type="text" value="Enter a city"
+                                <input autocomplete="on" list="cities" class="city" id="to" type="text"
+                                       value="Enter a city"
                                        onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Enter a city';}" required="">
                             </div>
