@@ -1,23 +1,28 @@
 <html lang="en-US">
 <head>
     <title>Yung</title>
+
+    <!--Meta Contents-->
     <meta content="IE=edge" http-equiv="x-ua-compatible">
     <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
-    <!-- Fonts -->
+
+    <!--Style Imports-->
     <link href="../css/external/google_fonts_open_sans_new.css" rel='stylesheet' type='text/css'>
-    <!-- Icons -->
     <link href="../css/external/ioniconsmin.css" media="all" rel="stylesheet" type="text/css">
-    <!-- Styles -->
     <link href="../css/keyframes.css" rel="stylesheet" type="text/css">
     <link href="../css/materialize.min.css" rel="stylesheet" type="text/css">
     <link href="../css/external/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/menu_page.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
 <body>
-<div class="m-scene" id="main"> <!-- Main Container -->
+
+<!-- Main Container -->
+<div class="m-scene" id="main">
+
     <!-- Page Content -->
     <div id="content" class="page">
 
@@ -30,27 +35,26 @@
         </div>
 
         <!-- Main Content -->
-
         <!-- Activity Content -->
         <div class="animated fadeinup delay-1">
 
             <br><br><br>
             <br>
             <div class="search">
-                <input style="width: 300px;" type="submit" value="Features" onclick="goFeaturesPage();">
+                <input type="submit" value="Features" onclick="goFeaturesPage();">
             </div>
             <div class="search">
-                <input style="width: 300px;" type="submit" value="About Us" onclick="goAboutPage();">
+                <input type="submit" value="About Us" onclick="goAboutPage();">
             </div>
             <div class="search">
-                <input style="width: 300px;" type="submit" value="Contact Us" onclick="goContactUsPage();">
+                <input type="submit" value="Contact Us" onclick="goContactUsPage();">
             </div>
             <div class="search">
-                <input style="width: 300px;" type="submit" value="Rate this app" onclick="rateUs();">
+                <input type="submit" value="Rate this app" onclick="rateUs();">
             </div>
 
             <div class="search">
-                <input style="width: 300px;" type="submit" value="Go Back" onclick="back();">
+                <input type="submit" value="Go Back" onclick="back();">
             </div>
             <div class="container activity">
 
@@ -65,6 +69,9 @@
     </div>
 </div>
 
+
+<!--Controller Imports-->
 <script type="text/javascript" src="../controllers/menupage_controller.js"></script>
+
 </body>
 </html>

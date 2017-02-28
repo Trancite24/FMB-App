@@ -1,29 +1,33 @@
 <html lang="en-US">
 <head>
     <title>Yung</title>
+
+    <!--Meta Contents-->
     <meta content="IE=edge" http-equiv="x-ua-compatible">
     <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
-    <!-- Fonts -->
+
+    <!--Style Imports-->
     <link href='../css/external/google_fonts_open_sans_new.css' rel='stylesheet' type='text/css'>
-    <!-- Icons -->
     <link href="../css/external/ioniconsmin.css" media="all" rel="stylesheet" type="text/css">
-    <!-- Styles -->
     <link href="../css/keyframes.css" rel="stylesheet" type="text/css">
     <link href="../css/materialize.min.css" rel="stylesheet" type="text/css">
-
     <link href="../css/external/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/menu_page.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
 <body>
-<div class="m-scene" id="main"> <!-- Main Container -->
+<!-- Main Container -->
+<div class="m-scene" id="main">
+
     <!-- Page Content -->
     <div id="content" class="page">
 
         <!-- Toolbar -->
         <div id="toolbar" class="primary-color">
+
             <div class="open-left">
                 <i class="ion-arrow-left-c" onclick="goHome()"></i>
             </div>
@@ -84,7 +88,7 @@
                 </div>
             </div>
             <div class="search">
-                <input style="width: 300px;" type="submit" value="Back" onclick="goHome();">
+                <input type="submit" value="Back" onclick="goHome();">
             </div>
         </div>
         <br>
@@ -92,6 +96,7 @@
     </div>
 </div>
 
+<!--Controller Imports-->
 <script type="text/javascript" src="../controllers/menupage_controller.js"></script>
 
 </body>

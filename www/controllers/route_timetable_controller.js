@@ -35,3 +35,32 @@ function goResults(){
 function viewMap(){
     window.location="viewBusRoute.html"
 }
+
+function onload_route_timetable(){
+    $(function () {
+
+        $(function () {
+            jQuery.ajax({
+                type: "GET",
+                dataType: 'jsonp',
+                url: "http://www.titansmora.org/findmybusfinal/TimeTables/getRoutes.php",
+                success: function (obj, textstatus) {
+                    if (!('error' in obj)) {
+                        $.each(obj, function (index, element) {
+                            $('#routes').append(
+                                '<option value=' + '"' + element + '"' + '></option>');
+                        });
+
+                    }
+                    else {
+                        console.log(obj.error);
+                    }
+                }
+            });
+
+        });
+
+
+
+    });
+}

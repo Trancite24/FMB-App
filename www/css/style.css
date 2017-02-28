@@ -26,7 +26,7 @@ body {
 }
 [class^="mdi-"],
 [class*="mdi-"] {
-    font-family: "Ionicons";
+    font-family: "Ionicons", serif;
 }
 h1,
 h2,

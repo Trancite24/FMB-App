@@ -1,0 +1,13 @@
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#adminMap {
+    height:651px;
+    width:460px;
+
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}

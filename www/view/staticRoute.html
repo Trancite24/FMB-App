@@ -1,61 +1,28 @@
 <html lang="en-US">
 <head>
     <title>Yung</title>
+
+    <!--Meta Content-->
     <meta content="IE=edge" http-equiv="x-ua-compatible">
     <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
-    <!-- Fonts -->
+
+    <!--Style Import-->
     <link href="../css/external/google_fonts_open_sans_new.css" rel='stylesheet' type='text/css'>
-    <!-- Icons -->
     <link href="../css/external/ioniconsmin.css" media="all" rel="stylesheet" type="text/css">
-    <!-- Styles -->
-    <script type="text/javascript" src="../controllers/home_controller.js"></script>
-    <!--bootstrap-->
     <link href="../css/external/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <!--custom css-->
     <link href="../css/external/style.css" rel="stylesheet" type="text/css"/>
-    <!--component-css-->
+
+    <!--Script Import-->
     <script src="../js/external/jquery-2.1.4.min.js"></script>
 
-    <script>
-
-        $(function () {
-
-            $(function () {
-                jQuery.ajax({
-                    type: "GET",
-                    dataType: 'jsonp',
-                    url: "http://www.titansmora.org/findmybusfinal/TimeTables/getRoutes.php",
-                    success: function (obj, textstatus) {
-                        if (!('error' in obj)) {
-                            $.each(obj, function (index, element) {
-                                $('#routes').append(
-                                    '<option value=' + '"' + element + '"' + '></option>');
-                            });
-
-                        }
-                        else {
-                            console.log(obj.error);
-                        }
-                    }
-                });
-
-            });
-
-
-
-        });
-
-
-    </script>
-
-    <script type="text/javascript" src="../controllers/static_route_controller.js"></script>
 </head>
 
-<body>
-<!--<div class="se-pre-con"></div>-->
-<div class="m-scene" id="main"> <!-- Main Container -->
+<body onload="onload_static_route()">
+
+<!-- Main Container -->
+<div class="m-scene" id="main">
     <!-- Page Content -->
     <div id="content" class="page">
 
@@ -144,5 +111,10 @@
         </div> <!-- End of Main Contents -->
     </div> <!-- End of Page Content -->
 </div> <!-- End of Page Container -->
+
+<!--Controller Import-->
+<script type="text/javascript" src="../controllers/home_controller.js"></script>
+<script type="text/javascript" src="../controllers/static_route_controller.js"></script>
+
 </body>
 </html>
