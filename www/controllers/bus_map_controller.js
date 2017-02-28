@@ -10,6 +10,7 @@ function initialize() {
     map = new google.maps.Map(document.getElementById('map_canvas'),
         mapOptions);
 
+    var infoWindow = new google.maps.InfoWindow; //static infoWindow for all your markers
 
     console.log(locations);
     $.each(locations, function (index, value) {
@@ -21,7 +22,7 @@ function initialize() {
 
         if (value[1] != 0.00000) {
 
-            var infowindow = new google.maps.InfoWindow({
+            infoWindow = new google.maps.InfoWindow({
                 content: "<p>Bus No: "+ busno + "<br />" +
                     "Arrival Time: " + arrivalTime + "<br />" +
                     "Distance: " + distance + "<br />" +
@@ -32,7 +33,7 @@ function initialize() {
                 position: new google.maps.LatLng(value[1], value[2])
             });
             marker.addListener('click', function () {
-                infowindow.open(map, marker);
+                infoWindow.open(map, marker);
             });
             marker.setMap(map);
             marker.setIcon('../images/bus_icon.png');
